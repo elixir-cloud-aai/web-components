@@ -13,7 +13,7 @@ the community.
 
 ## Versioning
 
-The project adopts the [semantic versioning][res-semver] scheme for versioning.
+The project adopts the [semantic versioning](https://semver.org/) scheme for versioning.
 Currently the service is in development v1 package for the same will be out soon. Stay tuned!
 
 ## License
