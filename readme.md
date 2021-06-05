@@ -2,7 +2,7 @@
 
 GA4GH Web components are the reusable custom elements that can be utilized in your web apps & web pages independently irrespective of what framework/library you are using to build the frontend. These components will mainly serve the [Elixir Cloud & AII](https://github.com/elixir-cloud-aai/) for managing their services.
 
-<img style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSlngTgCZ0y7nj1924od8RO%2FGA4GH-Service-Component%3Fnode-id%3D0%253A1" allowfullscreen></img>
+![image](https://user-images.githubusercontent.com/58766532/120885223-6f566080-c605-11eb-8831-d966c84a1cbf.png)
 
 ## Contributing
 
