@@ -14,21 +14,20 @@ the community.
 ## Versioning
 
 The project adopts the [semantic versioning][res-semver] scheme for versioning.
-Currently the service is in beta stage, so the API may change without further
-notice.
+Currently the service is in development v1 package for the same will be out soon. Stay tuned!
 
 ## License
 
-This project is covered by the [Apache License 2.0][license-apache] also
-[shipped with this repository][license].
+This project is covered by the MIT License also
+[shipped with this repository](https://github.com/git-anurag-hub/web-components/blob/master/LICENSE).
 
 ## Contact
 
 The project is a collaborative effort under the umbrella of [ELIXIR Cloud &
-AAI][elixir-cloud]. Follow the link to get in touch with us via chat or email.
+AAI](https://github.com/elixir-cloud-aai/). Follow the link to get in touch with us via chat or email.
 Please mention the name of this service for any inquiry, proposal, question
 etc. Alternatively, you can also make use of the [issue
-tracker][trs-filer-issues] to request features or report bugs.
+tracker](https://github.com/git-anurag-hub/web-components/issues) to request features or report bugs.
 
 
 # Stencil
