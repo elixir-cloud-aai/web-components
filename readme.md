@@ -1,14 +1,14 @@
 # GA4GH Web Components
 
-GA4GH Web components are the reusable custom elements that can be utilized in your web apps & web pages independently irrespective of what framework/library you are using to build the frontend. These components will mainly serve the [Elixir Cloud & AII ](https://github.com/elixir-cloud-aai/) for managing their services. 
+GA4GH Web components are the reusable custom elements that can be utilized in your web apps & web pages independently irrespective of what framework/library you are using to build the frontend. These components will mainly serve the [Elixir Cloud & AII](https://github.com/elixir-cloud-aai/) for managing their services. 
 
 ## Contributing
 
 This project is a community effort and lives off your contributions, be it in
 the form of bug reports, feature requests, discussions, or fixes and other code
 changes. Please refer to our organization's [contribution
-guidelines][elixir-cloud-contributing] if you are interested in contributing.
-Please mind the [code of conduct][elixir-cloud-coc] for all interactions with
+guidelines](https://github.com/elixir-cloud-aai/elixir-cloud-aai/blob/dev/CONTRIBUTING.md) if you are interested in contributing.
+Please mind the [code of conduct](https://github.com/elixir-cloud-aai/elixir-cloud-aai/blob/dev/CODE_OF_CONDUCT.md) for all interactions with
 the community.
 
 ## Versioning
