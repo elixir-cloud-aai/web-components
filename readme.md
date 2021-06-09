@@ -25,7 +25,7 @@ cd web-components
 - Install the packages to be used in the development:
 
 ```
-npm i
+npm install
 ```
 
 - Run start script to start the development enviroment of project:
