@@ -10,7 +10,7 @@ GA4GH Web components are the reusable custom elements that can be utilized in yo
 
 ### Prerequisites
 - Git
-- Node: any version starting with v12.0.0 or greater
+- [Node & npm](https://nodejs.org/en/): Recent LTS version avaliable
 - A fork of the repo (for any contributions)
 
 ### Installation
