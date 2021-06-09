@@ -18,4 +18,5 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  globalStyle: 'src/global/app.css',
 };

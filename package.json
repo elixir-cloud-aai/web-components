@@ -19,10 +19,12 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "build:css": "tailwind build src/global/style.css -o src/global/app.css"
   },
-  "dependencies": {
-    "@stencil/core": "^2.0.1"
+  "devDependencies": {
+    "@stencil/core": "^2.3.0",
+    "tailwindcss": "^2.0.3"
   },
   "license": "MIT"
 }
