@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@stencil/core": "^2.3.0",
+    "autoprefixer": "^10.2.6",
     "stencil-router-v2": "^0.6.0",
     "tailwindcss": "^2.0.3"
   },

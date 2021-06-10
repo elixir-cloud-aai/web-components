@@ -1,6 +1,7 @@
 dist/
 www/
 loader/
+src/global/app.css
 
 *~
 *.sw[mnpcod]
