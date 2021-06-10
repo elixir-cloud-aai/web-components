@@ -6,32 +6,84 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface TestWc {
+    interface WcElixirGa4ghService {
+    }
+    interface WcElixirUtilsManagePermissions {
+    }
+    interface WcElixirUtilsNewService {
+    }
+    interface WcElixirUtilsServiceCard {
+    }
+    interface WcElixirUtilsServiceList {
     }
 }
 declare global {
-    interface HTMLTestWcElement extends Components.TestWc, HTMLStencilElement {
+    interface HTMLWcElixirGa4ghServiceElement extends Components.WcElixirGa4ghService, HTMLStencilElement {
     }
-    var HTMLTestWcElement: {
-        prototype: HTMLTestWcElement;
-        new (): HTMLTestWcElement;
+    var HTMLWcElixirGa4ghServiceElement: {
+        prototype: HTMLWcElixirGa4ghServiceElement;
+        new (): HTMLWcElixirGa4ghServiceElement;
+    };
+    interface HTMLWcElixirUtilsManagePermissionsElement extends Components.WcElixirUtilsManagePermissions, HTMLStencilElement {
+    }
+    var HTMLWcElixirUtilsManagePermissionsElement: {
+        prototype: HTMLWcElixirUtilsManagePermissionsElement;
+        new (): HTMLWcElixirUtilsManagePermissionsElement;
+    };
+    interface HTMLWcElixirUtilsNewServiceElement extends Components.WcElixirUtilsNewService, HTMLStencilElement {
+    }
+    var HTMLWcElixirUtilsNewServiceElement: {
+        prototype: HTMLWcElixirUtilsNewServiceElement;
+        new (): HTMLWcElixirUtilsNewServiceElement;
+    };
+    interface HTMLWcElixirUtilsServiceCardElement extends Components.WcElixirUtilsServiceCard, HTMLStencilElement {
+    }
+    var HTMLWcElixirUtilsServiceCardElement: {
+        prototype: HTMLWcElixirUtilsServiceCardElement;
+        new (): HTMLWcElixirUtilsServiceCardElement;
+    };
+    interface HTMLWcElixirUtilsServiceListElement extends Components.WcElixirUtilsServiceList, HTMLStencilElement {
+    }
+    var HTMLWcElixirUtilsServiceListElement: {
+        prototype: HTMLWcElixirUtilsServiceListElement;
+        new (): HTMLWcElixirUtilsServiceListElement;
     };
     interface HTMLElementTagNameMap {
-        "test-wc": HTMLTestWcElement;
+        "wc-elixir-ga4gh-service": HTMLWcElixirGa4ghServiceElement;
+        "wc-elixir-utils-manage-permissions": HTMLWcElixirUtilsManagePermissionsElement;
+        "wc-elixir-utils-new-service": HTMLWcElixirUtilsNewServiceElement;
+        "wc-elixir-utils-service-card": HTMLWcElixirUtilsServiceCardElement;
+        "wc-elixir-utils-service-list": HTMLWcElixirUtilsServiceListElement;
     }
 }
 declare namespace LocalJSX {
-    interface TestWc {
+    interface WcElixirGa4ghService {
+    }
+    interface WcElixirUtilsManagePermissions {
+    }
+    interface WcElixirUtilsNewService {
+    }
+    interface WcElixirUtilsServiceCard {
+    }
+    interface WcElixirUtilsServiceList {
     }
     interface IntrinsicElements {
-        "test-wc": TestWc;
+        "wc-elixir-ga4gh-service": WcElixirGa4ghService;
+        "wc-elixir-utils-manage-permissions": WcElixirUtilsManagePermissions;
+        "wc-elixir-utils-new-service": WcElixirUtilsNewService;
+        "wc-elixir-utils-service-card": WcElixirUtilsServiceCard;
+        "wc-elixir-utils-service-list": WcElixirUtilsServiceList;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "test-wc": LocalJSX.TestWc & JSXBase.HTMLAttributes<HTMLTestWcElement>;
+            "wc-elixir-ga4gh-service": LocalJSX.WcElixirGa4ghService & JSXBase.HTMLAttributes<HTMLWcElixirGa4ghServiceElement>;
+            "wc-elixir-utils-manage-permissions": LocalJSX.WcElixirUtilsManagePermissions & JSXBase.HTMLAttributes<HTMLWcElixirUtilsManagePermissionsElement>;
+            "wc-elixir-utils-new-service": LocalJSX.WcElixirUtilsNewService & JSXBase.HTMLAttributes<HTMLWcElixirUtilsNewServiceElement>;
+            "wc-elixir-utils-service-card": LocalJSX.WcElixirUtilsServiceCard & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceCardElement>;
+            "wc-elixir-utils-service-list": LocalJSX.WcElixirUtilsServiceList & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceListElement>;
         }
     }
 }
