@@ -29,12 +29,6 @@ cd web-components
 npm install
 ```
 
-- Build the css for the project:
-
-```
-npm run build:css
-```
-
 - Run start script to start the development enviroment of project:
 
 ```
