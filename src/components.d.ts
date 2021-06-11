@@ -20,6 +20,8 @@ export namespace Components {
     }
     interface WcElixirUtilsServiceList {
     }
+    interface WcHome {
+    }
 }
 declare global {
     interface HTMLAppLoadElement extends Components.AppLoad, HTMLStencilElement {
@@ -64,6 +66,12 @@ declare global {
         prototype: HTMLWcElixirUtilsServiceListElement;
         new (): HTMLWcElixirUtilsServiceListElement;
     };
+    interface HTMLWcHomeElement extends Components.WcHome, HTMLStencilElement {
+    }
+    var HTMLWcHomeElement: {
+        prototype: HTMLWcHomeElement;
+        new (): HTMLWcHomeElement;
+    };
     interface HTMLElementTagNameMap {
         "app-load": HTMLAppLoadElement;
         "wc-docs": HTMLWcDocsElement;
@@ -72,6 +80,7 @@ declare global {
         "wc-elixir-utils-new-service": HTMLWcElixirUtilsNewServiceElement;
         "wc-elixir-utils-service-card": HTMLWcElixirUtilsServiceCardElement;
         "wc-elixir-utils-service-list": HTMLWcElixirUtilsServiceListElement;
+        "wc-home": HTMLWcHomeElement;
     }
 }
 declare namespace LocalJSX {
@@ -89,6 +98,8 @@ declare namespace LocalJSX {
     }
     interface WcElixirUtilsServiceList {
     }
+    interface WcHome {
+    }
     interface IntrinsicElements {
         "app-load": AppLoad;
         "wc-docs": WcDocs;
@@ -97,6 +108,7 @@ declare namespace LocalJSX {
         "wc-elixir-utils-new-service": WcElixirUtilsNewService;
         "wc-elixir-utils-service-card": WcElixirUtilsServiceCard;
         "wc-elixir-utils-service-list": WcElixirUtilsServiceList;
+        "wc-home": WcHome;
     }
 }
 export { LocalJSX as JSX };
@@ -110,6 +122,7 @@ declare module "@stencil/core" {
             "wc-elixir-utils-new-service": LocalJSX.WcElixirUtilsNewService & JSXBase.HTMLAttributes<HTMLWcElixirUtilsNewServiceElement>;
             "wc-elixir-utils-service-card": LocalJSX.WcElixirUtilsServiceCard & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceCardElement>;
             "wc-elixir-utils-service-list": LocalJSX.WcElixirUtilsServiceList & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceListElement>;
+            "wc-home": LocalJSX.WcHome & JSXBase.HTMLAttributes<HTMLWcHomeElement>;
         }
     }
 }

@@ -28,5 +28,7 @@
     "stencil-router-v2": "^0.6.0"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
 }

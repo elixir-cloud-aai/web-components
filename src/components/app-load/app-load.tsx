@@ -1,26 +1,39 @@
 import { Component, Host, h } from '@stencil/core';
-import { createRouter, Route } from 'stencil-router-v2';
+import { createRouter, Route, href } from 'stencil-router-v2';
 
 const Router = createRouter();
 
 @Component({
   tag: 'app-load',
   styleUrl: 'app-load.css',
-  shadow: true,
+  scoped: true,
 })
 export class AppLoad {
   render() {
     return (
       <Host>
+        <ion-header translucent="false">
+          <ion-toolbar color="favourite">
+            <ion-buttons slot="secondary">
+              <ion-button>
+                <a {...href('/')}>Home</a>
+              </ion-button>
+              <ion-button>
+                <a {...href('/docs')}>Docs</a>
+              </ion-button>
+              <ion-button></ion-button>
+            </ion-buttons>
+            <ion-title>Web Components Elixir Cloud & AII</ion-title>
+          </ion-toolbar>
+        </ion-header>
+
         <Router.Switch>
           <Route path="/">
-            <ion-header>
-              <ion-toolbar>
-                <ion-title>Elixir Cloud & AII</ion-title>
-              </ion-toolbar>
-            </ion-header>
+            <wc-home></wc-home>
           </Route>
-          <Route path="/docs"></Route>
+          <Route path="/docs">
+            <wc-docs></wc-docs>
+          </Route>
         </Router.Switch>
       </Host>
     );

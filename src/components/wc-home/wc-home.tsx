@@ -1,11 +1,12 @@
 import { Component, Host, h } from '@stencil/core';
+import axios from 'axios';
 
 @Component({
-  tag: 'wc-docs',
-  styleUrl: 'wc-docs.css',
+  tag: 'wc-home',
+  styleUrl: 'wc-home.css',
   shadow: true,
 })
-export class WcDocs {
+export class WcHome {
   render() {
     return (
       <Host>
