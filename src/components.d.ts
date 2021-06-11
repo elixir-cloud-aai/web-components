@@ -6,6 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppLoad {
+    }
+    interface WcDocs {
+    }
     interface WcElixirGa4ghService {
     }
     interface WcElixirUtilsManagePermissions {
@@ -18,6 +22,18 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppLoadElement extends Components.AppLoad, HTMLStencilElement {
+    }
+    var HTMLAppLoadElement: {
+        prototype: HTMLAppLoadElement;
+        new (): HTMLAppLoadElement;
+    };
+    interface HTMLWcDocsElement extends Components.WcDocs, HTMLStencilElement {
+    }
+    var HTMLWcDocsElement: {
+        prototype: HTMLWcDocsElement;
+        new (): HTMLWcDocsElement;
+    };
     interface HTMLWcElixirGa4ghServiceElement extends Components.WcElixirGa4ghService, HTMLStencilElement {
     }
     var HTMLWcElixirGa4ghServiceElement: {
@@ -49,6 +65,8 @@ declare global {
         new (): HTMLWcElixirUtilsServiceListElement;
     };
     interface HTMLElementTagNameMap {
+        "app-load": HTMLAppLoadElement;
+        "wc-docs": HTMLWcDocsElement;
         "wc-elixir-ga4gh-service": HTMLWcElixirGa4ghServiceElement;
         "wc-elixir-utils-manage-permissions": HTMLWcElixirUtilsManagePermissionsElement;
         "wc-elixir-utils-new-service": HTMLWcElixirUtilsNewServiceElement;
@@ -57,6 +75,10 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface AppLoad {
+    }
+    interface WcDocs {
+    }
     interface WcElixirGa4ghService {
     }
     interface WcElixirUtilsManagePermissions {
@@ -68,6 +90,8 @@ declare namespace LocalJSX {
     interface WcElixirUtilsServiceList {
     }
     interface IntrinsicElements {
+        "app-load": AppLoad;
+        "wc-docs": WcDocs;
         "wc-elixir-ga4gh-service": WcElixirGa4ghService;
         "wc-elixir-utils-manage-permissions": WcElixirUtilsManagePermissions;
         "wc-elixir-utils-new-service": WcElixirUtilsNewService;
@@ -79,6 +103,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-load": LocalJSX.AppLoad & JSXBase.HTMLAttributes<HTMLAppLoadElement>;
+            "wc-docs": LocalJSX.WcDocs & JSXBase.HTMLAttributes<HTMLWcDocsElement>;
             "wc-elixir-ga4gh-service": LocalJSX.WcElixirGa4ghService & JSXBase.HTMLAttributes<HTMLWcElixirGa4ghServiceElement>;
             "wc-elixir-utils-manage-permissions": LocalJSX.WcElixirUtilsManagePermissions & JSXBase.HTMLAttributes<HTMLWcElixirUtilsManagePermissionsElement>;
             "wc-elixir-utils-new-service": LocalJSX.WcElixirUtilsNewService & JSXBase.HTMLAttributes<HTMLWcElixirUtilsNewServiceElement>;
