@@ -1,4 +1,4 @@
-# GA4GH Web Components
+# Elixir Cloud & AII Web Components
 
 ## Description
 
