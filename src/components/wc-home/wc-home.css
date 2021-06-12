@@ -6,5 +6,18 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 960px;
-  padding: 18px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.content {
+  line-height: 200%;
+}
+
+.code {
+  background-color: gainsboro;
+  border-radius: 5px;
+  padding: 5px 13px;
+  font-family: monospace;
+  font-size: 16px;
 }
