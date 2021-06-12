@@ -1,5 +1,4 @@
 import { Component, Host, h } from '@stencil/core';
-import axios from 'axios';
 
 @Component({
   tag: 'wc-home',

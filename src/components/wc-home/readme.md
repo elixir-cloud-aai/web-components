@@ -1,4 +1,4 @@
-# wc-docs
+# wc-home
 
 
 
@@ -14,8 +14,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  app-load --> wc-docs
-  style wc-docs fill:#f9f,stroke:#333,stroke-width:4px
+  app-load --> wc-home
+  style wc-home fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
