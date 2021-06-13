@@ -13,8 +13,8 @@ export class AppLoad {
     return (
       <Host>
         <ion-app>
-          <ion-header translucent="false">
-            <ion-toolbar color="favourite">
+          <ion-header>
+            <ion-toolbar>
               <ion-buttons slot="secondary">
                 <ion-button>
                   <a {...href('/')}>Home</a>
@@ -27,7 +27,7 @@ export class AppLoad {
               <ion-title>Web Components Elixir Cloud & AII</ion-title>
             </ion-toolbar>
           </ion-header>
-          <ion-content overflow-scroll="true">
+          <ion-content>
             <ion-scroll>
               <Router.Switch>
                 <Route path="/">
@@ -38,8 +38,14 @@ export class AppLoad {
                 </Route>
               </Router.Switch>
             </ion-scroll>
-            <br></br>
-            <br></br>
+            <hr></hr>
+            <ion-toolbar color="medium">
+              <div class="center-content">
+                © 2021 Web-Components. Released under MIT License
+                <br></br>
+                Managed by <a href="https://github.com/git-anurag-hub/">Anurag's Github</a>
+              </div>
+            </ion-toolbar>
           </ion-content>
         </ion-app>
       </Host>
