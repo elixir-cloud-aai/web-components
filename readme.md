@@ -16,7 +16,7 @@ GA4GH Web components are the reusable custom elements that can be utilized in yo
 
 ### Installation
 
-- To start with, fork & clone the repository and traverse into the service's root directory with:
+- To start with, [fork](https://github.com/git-anurag-hub/web-components) & clone the repository and traverse into the service's root directory with:
 
 ```
 git clone https://github.com/<your-github-username>/web-components.git
