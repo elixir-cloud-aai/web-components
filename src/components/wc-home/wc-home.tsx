@@ -34,7 +34,9 @@ export class WcHome {
           <h2>Installation</h2>
           <div class="content">
             <ul>
-              <li>To start with, fork & clone the repository and traverse into the service's root directory with:</li>
+              <li>
+                To start with, <a href="https://github.com/git-anurag-hub/web-components">fork</a> & clone the repository and traverse into the service's root directory with:
+              </li>
             </ul>
             <div class="code">
               git clone https://github.com/&lt;your-github-username&gt;/web-components.git <br></br>cd web-components
@@ -77,7 +79,7 @@ export class WcHome {
           <h1>Contact</h1>
           <div class="content">
             The project is a collaborative effort under the umbrella of <a href="https://github.com/elixir-cloud-aai/">ELIXIR Cloud & AAI.</a> Follow the link to get in touch with
-            us via chat or email. Please mention the name of this service for any inquiry, proposal, question etc. Alternatively, you can also make use of the
+            us via chat or email. Please mention the name of this service for any inquiry, proposal, question etc. Alternatively, you can also make use of the{' '}
             <a href="https://github.com/git-anurag-hub/web-components/issues">issue tracker</a> to request features or report bugs.
           </div>
         </div>
