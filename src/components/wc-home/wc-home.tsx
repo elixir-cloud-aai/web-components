@@ -15,7 +15,9 @@ export class WcHome {
             Elixir Cloud & AII Web components are the reusable custom elements that can be utilized in your web apps & web pages independently irrespective of what
             framework/library you are using to build the frontend. These components will mainly serve the <a href="https://elixir-europe.github.io/cloud/">Elixir Cloud & AII</a>{' '}
             for managing their services.
-            <img src="https://user-images.githubusercontent.com/58766532/120885223-6f566080-c605-11eb-8831-d966c84a1cbf.png" height="800"></img>
+            <div class="image">
+              <img src="https://user-images.githubusercontent.com/58766532/120885223-6f566080-c605-11eb-8831-d966c84a1cbf.png" height="800"></img>
+            </div>
           </div>
 
           <h1>Getting Started</h1>

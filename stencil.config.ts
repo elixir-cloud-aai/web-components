@@ -16,7 +16,8 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
-      empty: false,
+      empty: true,
     },
   ],
+  preamble: 'Built by Elixir Cloud & AII',
 };

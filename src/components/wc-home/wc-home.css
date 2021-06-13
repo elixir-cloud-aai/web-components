@@ -21,3 +21,7 @@
   font-family: monospace;
   font-size: 16px;
 }
+
+.image {
+  overflow-y: auto;
+}

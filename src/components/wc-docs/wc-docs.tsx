@@ -9,7 +9,7 @@ export class WcDocs {
   render() {
     return (
       <Host>
-        <div class="wrapper">Docs</div>
+        <div class="wrapper">In Development</div>
       </Host>
     );
   }
