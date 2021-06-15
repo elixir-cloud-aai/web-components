@@ -21,8 +21,8 @@ export class WcHome {
             <div class="text-xl text-gray-400">
               Elixir Components provide you with the various lightweight, fast Web Components to use in your application enviroment independently.
             </div>
-            <button class="text-lg mt-8 px-5 bg-secondary p-2 shadow-lg rounded-xl">Get Started</button>
-            <button class="text-lg ml-10 px-5 bg-gray-200 p-2 shadow-inner rounded-xl">$ npm i @elixir/web-components</button>
+            <button class="text-lg mt-8 px-5 bg-secondary p-2 shadow-lg rounded-xl w-full md:w-max">Get Started</button>
+            <button class="text-lg ml-0 mt-5 px-5 bg-gray-200 p-2 shadow-inner rounded-xl w-full md:w-max md:ml-10 md:mt-0">$ npm i @elixir/web-components</button>
           </div>
         </div>
       </Host>
