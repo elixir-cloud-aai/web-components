@@ -22,7 +22,7 @@ export class AppLoad {
                 </a>
               </div>
               <div class="flex items-center">
-                <div class="text-l md:text-xl hover:text-primary hover:border-primary text-gray-400 border-b-2 border-white  transition ease-out duration-500">
+                <div class="text-l md:text-xl hover:text-primary hover:border-primary text-gray-400 border-b-2 border-white transition ease-out duration-500">
                   <a {...href('/docs')} class="hidden md:inline-block ">
                     Documentation
                   </a>
