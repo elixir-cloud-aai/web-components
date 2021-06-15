@@ -44,11 +44,11 @@ export class WcHome {
             </button>
           </div>
           <div class="mx-10 md:mx-40">
-            <div class="flex md:flex">
+            <div class="flex flex-col md:flex-row">
               <div class="text-3xl font-bold md:text-4xl text-gray-700 flex-grow flex-1">
                 Who are <span class="text-gray-400">we</span>?
               </div>
-              <div class="text-lg md:text-xl text-gray-700 flex-1">
+              <div class="text-lg md:text-xl text-gray-700 flex-1 mt-5 md:mt-0">
                 Elixir Cloud components are web-components which are developed by{' '}
                 <span class="font-semibold text-primary hover:border-primary border-b-2 border-white transition ease-out duration-500">
                   <a href="https://elixir-europe.github.io/cloud/" target="_blank" rel="noopener noreferrer">
