@@ -12,42 +12,22 @@ export class AppLoad {
   render() {
     return (
       <Host>
-        <ion-app>
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="secondary">
-                <ion-button>
-                  <a {...href('/')}>Home</a>
-                </ion-button>
-                <ion-button>
-                  <a {...href('/docs')}>Docs</a>
-                </ion-button>
-                <ion-button></ion-button>
-              </ion-buttons>
-              <ion-title>Web Components Elixir Cloud & AII</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content>
-            <ion-scroll>
-              <Router.Switch>
-                <Route path="/">
-                  <wc-home></wc-home>
-                </Route>
-                <Route path="/docs">
-                  <wc-docs></wc-docs>
-                </Route>
-              </Router.Switch>
-            </ion-scroll>
-            <hr></hr>
-            <ion-toolbar color="medium">
-              <div class="center-content">
-                © 2021 Web-Components. Released under MIT License
-                <br></br>
-                Managed by <a href="https://github.com/git-anurag-hub/">Anurag's Github</a>
-              </div>
-            </ion-toolbar>
-          </ion-content>
-        </ion-app>
+        <a {...href('/')}>Home</a>
+        <a {...href('/docs')}>Docs</a>
+        Web Components Elixir Cloud & AII
+        <Router.Switch>
+          <Route path="/">
+            <wc-home></wc-home>
+          </Route>
+          <Route path="/docs">
+            <wc-docs></wc-docs>
+          </Route>
+        </Router.Switch>
+        <div class="center-content">
+          © 2021 Web-Components. Released under MIT License
+          <br></br>
+          Managed by <a href="https://github.com/git-anurag-hub/">Anurag's Github</a>
+        </div>
       </Host>
     );
   }

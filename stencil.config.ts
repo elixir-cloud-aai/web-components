@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'web-components',
+  globalStyle: 'src/global/app.css',
   outputTargets: [
     {
       type: 'dist',
@@ -15,8 +16,6 @@ export const config: Config = {
     },
     {
       type: 'www',
-      serviceWorker: null, // disable service workers
-      empty: true,
     },
   ],
   preamble: 'Built by Elixir Cloud & AII',
