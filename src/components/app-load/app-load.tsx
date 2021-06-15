@@ -18,11 +18,11 @@ export class AppLoad {
               <div class="text-xl md:text-2xl">
                 <a {...href('/')}>
                   <img src="https://raw.githubusercontent.com/elixir-cloud-aai/logo/dev/logo.128px.png" class="inline-block w-7 mx-3 md:w-9"></img>
-                  <div class="hidden md:inline-block text-gray-700 font-semibold">Elixir Cloud & AII - Web Components</div>
+                  <div class="hidden md:inline-block text-gray-700 font-semibold">Elixir Cloud Components</div>
                 </a>
               </div>
               <div class="flex items-center">
-                <div class="text-l md:text-xl hover:text-primary hover:border-primary text-gray-400 border-b-2 border-white transition ease-out duration-500">
+                <div class="text-l md:text-xl hover:text-primary hover:border-primary text-gray-400 border-b-2 border-white  transition ease-out duration-500">
                   <a {...href('/docs')} class="hidden md:inline-block ">
                     Documentation
                   </a>
