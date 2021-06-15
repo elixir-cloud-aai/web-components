@@ -16,7 +16,7 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
+    "build": "npm run build:css && stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
@@ -28,7 +28,8 @@
     "@stencil/postcss": "^2.0.0",
     "autoprefixer": "^10.2.6",
     "stencil-router-v2": "^0.6.0",
-    "tailwindcss": "^2.1.4"
+    "tailwindcss": "^2.1.4",
+    "workbox-build": "^4.3.1"
   },
   "license": "MIT",
   "dependencies": {
