@@ -74,19 +74,56 @@ export class WcHome {
                 Start by <span class="text-gray-400">building now</span>.
               </div>
               <div class="text-lg md:text-xl text-gray-700 flex-1 mt-5 md:mt-0">
-                Elixir Cloud components are web-components which are developed by{' '}
-                <span class="font-semibold text-primary hover:border-primary border-b-2 border-white transition ease-out duration-500">
-                  <a href="https://elixir-europe.github.io/cloud/" target="_blank" rel="noopener noreferrer">
-                    Elixir Cloud & AII Community
-                  </a>
-                </span>
-                . ELIXIR Cloud & AAI is a cross platform initiative of ELIXIR and a driver project of the Global Alliance for Genomics and Health better known as{' '}
-                <span class="font-semibold text-primary hover:border-primary border-b-2 border-white transition ease-out duration-500">
-                  <a href="https://www.ga4gh.org/" target="_blank" rel="noopener noreferrer">
-                    GA4GH
-                  </a>
-                </span>
-                .
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mb-3 pt-2 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Lightweight.
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mb-3 pt-2 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Asynchronous rendering.
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mb-3 pt-2 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Browser Independent.
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mb-3 pt-2 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Develop with any framework.{' '}
+                  <span class="text-xs font-semibold text-primary hover:border-primary border-b-2 border-white transition ease-out duration-500">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mb-3 pt-2 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Virtual DOM.
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mb-3 pt-2 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Open Source.{' '}
+                  <span class="text-xs font-semibold text-primary hover:border-primary border-b-2 border-white transition ease-out duration-500">
+                    <a href="https://github.com/git-anurag-hub/web-components" target="_blank" rel="noopener noreferrer">
+                      Contribute Now
+                    </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </div>
           </div>

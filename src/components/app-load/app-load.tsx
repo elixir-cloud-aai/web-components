@@ -14,16 +14,11 @@ export class AppLoad {
 
   componentWillLoad() {
     Router.onChange('url', (newValue: InternalRouterState['url'], _oldValue: InternalRouterState['url']) => {
-      // Access fields such as pathname, search, etc. from newValue
       this.load = newValue.pathname;
-      console.log('this.load', this.load);
-      // This would be a good place to send a Google Analytics event, for example
     });
   }
 
   render() {
-    const activePath = Router.activePath;
-    console.log('activePath', activePath);
     return (
       <Host>
         <div class="flex flex-col h-screen">
@@ -36,7 +31,11 @@ export class AppLoad {
                 </a>
               </div>
               <div class="flex items-center">
-                <div class="text-l md:text-xl hover:text-primary hover:border-primary text-gray-400 border-b-2 border-white transition ease-out duration-500">
+                <div
+                  class={`text-l md:text-xl ${
+                    this.load == '/docs' ? 'text-primary border-primary' : 'hover:text-primary hover:border-primary'
+                  } text-gray-400 border-b-2 border-white transition ease-out duration-500`}
+                >
                   <a {...href('/docs')} class="hidden md:inline-block ">
                     Documentation
                   </a>
