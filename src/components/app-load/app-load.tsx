@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop, Watch } from '@stencil/core';
 import { createRouter, Route, href } from 'stencil-router-v2';
 
 const Router = createRouter();
