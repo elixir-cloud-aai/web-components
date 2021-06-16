@@ -1,5 +1,6 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, State } from '@stencil/core';
 import { createRouter, Route, href } from 'stencil-router-v2';
+import { InternalRouterState } from 'stencil-router-v2/dist/types';
 
 const Router = createRouter();
 
@@ -9,7 +10,20 @@ const Router = createRouter();
   scoped: true,
 })
 export class AppLoad {
+  @State() load: string = '/';
+
+  componentWillLoad() {
+    Router.onChange('url', (newValue: InternalRouterState['url'], _oldValue: InternalRouterState['url']) => {
+      // Access fields such as pathname, search, etc. from newValue
+      this.load = newValue.pathname;
+      console.log('this.load', this.load);
+      // This would be a good place to send a Google Analytics event, for example
+    });
+  }
+
   render() {
+    const activePath = Router.activePath;
+    console.log('activePath', activePath);
     return (
       <Host>
         <div class="flex flex-col h-screen">
