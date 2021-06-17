@@ -7,7 +7,7 @@ import { Component, Host, h, State } from '@stencil/core';
 })
 export class WcDocs {
   @State() navOpen: Boolean = false;
-  @State() indexes: { display: string; url: string; subIndexes: { display: string; url: string }[] }[] = [
+  @State() indexes: { display: string; url: string; subIndexes?: { display: string; url: string }[] }[] = [
     {
       display: 'Introduction',
       url: 'introduction',
@@ -20,7 +20,15 @@ export class WcDocs {
           display: 'Community',
           url: 'community',
         },
+        {
+          display: 'Contribute',
+          url: 'contribute',
+        },
       ],
+    },
+    {
+      display: 'Components',
+      url: 'components',
     },
   ];
 
