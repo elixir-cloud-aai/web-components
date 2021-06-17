@@ -7,6 +7,43 @@ import { Component, Host, h, State } from '@stencil/core';
 })
 export class WcDocs {
   @State() navOpen: Boolean = false;
+  @State() indexes: { display: string; url: string; subIndexes: { display: string; url: string }[] }[] = [
+    {
+      display: 'Introduction',
+      url: 'introduction',
+      subIndexes: [
+        {
+          display: 'Getting Started',
+          url: 'getting-started',
+        },
+        {
+          display: 'Community',
+          url: 'community',
+        },
+      ],
+    },
+  ];
+
+  renderIndex = () => {
+    return (
+      <div>
+        {this.indexes.map(index => {
+          return (
+            <div>
+              <button class="block pt-2.5 pb-1 text-base font-semibold mx-4 transition duration-200 focus:outline-none focus:shadow-outline hover:text-primary">
+                {index.display}
+              </button>
+              <div class="ml-10">
+                {index.subIndexes.map(subIndex => {
+                  return <button class="block text-base py-1 transition duration-200 focus:outline-none focus:shadow-outline hover:text-primary">{subIndex.display}</button>;
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
   handleToggleNav = () => {
     const nav = document.querySelector('.sidebar');
@@ -69,8 +106,7 @@ export class WcDocs {
               ) : (
                 ''
               )}
-
-              <button class="block py-2.5 px-4 transition duration-200">Getting Started</button>
+              {this.renderIndex()}
             </nav>
           </div>
 
