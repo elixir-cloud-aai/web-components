@@ -22,7 +22,7 @@ export class AppLoad {
     return (
       <Host>
         <div class="flex flex-col h-screen">
-          <nav class="p-4 border-b-2 mx-0 md:mx-10">
+          <nav class="p-4 md:border-b-2 mx-0 md:mx-10">
             <div class="flex items-center justify-between">
               <div class="text-xl md:text-2xl">
                 <a {...href('/')}>
