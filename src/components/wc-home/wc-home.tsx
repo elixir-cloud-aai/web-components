@@ -13,7 +13,7 @@ export class WcHome {
           <div class="absolute right-10 md:right-40 -top-28">
             <img src="https://raw.githubusercontent.com/elixir-cloud-aai/logo/dev/logo.svg" class="inline-block mx-3 opacity-20 w-96 md:w-108"></img>
           </div>
-          <div class="mx-10 md:ml-40 mt-28 mb-40 md:mb-56 md:mr-108 md:mt-40 static">
+          <div class="mx-10 md:ml-40 mt-28 mb-40 md:mb-56 md:mr-40 lg:mr-108 md:mt-40 static">
             <div class="text-4xl font-bold md:text-5xl text-gray-700">
               Build service dashboards rapidly with <span class="text-primary font-extrabold">Elixir Cloud Components</span>.
             </div>
@@ -21,10 +21,10 @@ export class WcHome {
             <div class="text-xl text-gray-400">
               These provide you with the various lightweight, fast, reusable Web Components to be use in your application enviroment independently.
             </div>
-            <button class="text-lg mt-8 px-5 bg-secondary text-white focus:outline-none p-2 hover:shadow-xl transition ease-out duration-500 rounded-xl w-full md:w-max">
+            <button class="text-lg mt-8 px-5 bg-secondary text-white focus:outline-none p-2 hover:shadow-xl transition ease-out duration-500 rounded-xl w-full md:w-max md:mr-10">
               Get Started
             </button>
-            <button class="text-lg ml-0 mt-5 px-5 bg-gray-200 p-2 focus:outline-none shadow-inner rounded-xl w-full md:w-max md:ml-10 md:mt-0">
+            <button class="text-lg ml-0 mt-5 px-5 bg-gray-200 p-2 focus:outline-none shadow-inner rounded-xl  w-full md:w-max">
               <span class="mr-2 text-gray-400">$</span> npm i @elixir/web-components
               <svg
                 xmlns="http://www.w3.org/2000/svg"
