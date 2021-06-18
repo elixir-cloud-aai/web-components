@@ -9,8 +9,8 @@ import Router from '../../router.js';
 export class WcDocs {
   renderContent = () => {
     switch (Router.url.pathname) {
-      case '/docs':
-        return <div>Docs</div>;
+      case '/docs/components/service-list':
+        return <wc-elixir-utils-service-list></wc-elixir-utils-service-list>;
       default:
         break;
     }
@@ -21,7 +21,7 @@ export class WcDocs {
       <Host>
         <div class="relative min-h-screen md:flex">
           <wc-indexes></wc-indexes>
-          <div class="flex-1 m-5 md:m-10 overflow-y-scroll">{this.renderContent()}</div>
+          <div class="flex-1 m-5 md:m-10 overflow-y-visible">{this.renderContent()}</div>
         </div>
       </Host>
     );

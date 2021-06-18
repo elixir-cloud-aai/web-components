@@ -19,6 +19,7 @@ export namespace Components {
     interface WcElixirUtilsServiceCard {
     }
     interface WcElixirUtilsServiceList {
+        "authToken"?: any;
     }
     interface WcHome {
     }
@@ -106,6 +107,7 @@ declare namespace LocalJSX {
     interface WcElixirUtilsServiceCard {
     }
     interface WcElixirUtilsServiceList {
+        "authToken"?: any;
     }
     interface WcHome {
     }

@@ -60,7 +60,7 @@ export class WcIndexes {
   render() {
     return (
       <Host>
-        <div class="flex justify-between md:hidden overflow-y-scroll">
+        <div class="flex justify-between md:hidden overflow-y-visible">
           <button
             class="mobile-menu-button pl-4 focus:outline-none"
             onClick={() => {
