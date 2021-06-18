@@ -73,7 +73,6 @@ export class WcIndexes {
           </button>
           <input
             class="focus:shadow-md border m-5 focus:border-gray-300 rounded-lg w-full py-2 px-3 text-gray-500  focus:outline-none focus:shadow-outline"
-            id="search"
             type="text"
             autocomplete="off"
             placeholder="Search"
@@ -90,7 +89,6 @@ export class WcIndexes {
           ) : (
             <input
               class="focus:shadow-md focus:border-gray-300 border rounded-lg w-full  py-2 px-3 text-gray-500 focus:outline-none focus:shadow-outline"
-              id="search"
               type="text"
               autocomplete="off"
               placeholder="Search"
