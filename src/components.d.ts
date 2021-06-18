@@ -22,6 +22,8 @@ export namespace Components {
     }
     interface WcHome {
     }
+    interface WcIndexes {
+    }
 }
 declare global {
     interface HTMLAppLoadElement extends Components.AppLoad, HTMLStencilElement {
@@ -72,6 +74,12 @@ declare global {
         prototype: HTMLWcHomeElement;
         new (): HTMLWcHomeElement;
     };
+    interface HTMLWcIndexesElement extends Components.WcIndexes, HTMLStencilElement {
+    }
+    var HTMLWcIndexesElement: {
+        prototype: HTMLWcIndexesElement;
+        new (): HTMLWcIndexesElement;
+    };
     interface HTMLElementTagNameMap {
         "app-load": HTMLAppLoadElement;
         "wc-docs": HTMLWcDocsElement;
@@ -81,6 +89,7 @@ declare global {
         "wc-elixir-utils-service-card": HTMLWcElixirUtilsServiceCardElement;
         "wc-elixir-utils-service-list": HTMLWcElixirUtilsServiceListElement;
         "wc-home": HTMLWcHomeElement;
+        "wc-indexes": HTMLWcIndexesElement;
     }
 }
 declare namespace LocalJSX {
@@ -100,6 +109,8 @@ declare namespace LocalJSX {
     }
     interface WcHome {
     }
+    interface WcIndexes {
+    }
     interface IntrinsicElements {
         "app-load": AppLoad;
         "wc-docs": WcDocs;
@@ -109,6 +120,7 @@ declare namespace LocalJSX {
         "wc-elixir-utils-service-card": WcElixirUtilsServiceCard;
         "wc-elixir-utils-service-list": WcElixirUtilsServiceList;
         "wc-home": WcHome;
+        "wc-indexes": WcIndexes;
     }
 }
 export { LocalJSX as JSX };
@@ -123,6 +135,7 @@ declare module "@stencil/core" {
             "wc-elixir-utils-service-card": LocalJSX.WcElixirUtilsServiceCard & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceCardElement>;
             "wc-elixir-utils-service-list": LocalJSX.WcElixirUtilsServiceList & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceListElement>;
             "wc-home": LocalJSX.WcHome & JSXBase.HTMLAttributes<HTMLWcHomeElement>;
+            "wc-indexes": LocalJSX.WcIndexes & JSXBase.HTMLAttributes<HTMLWcIndexesElement>;
         }
     }
 }

@@ -1,8 +1,7 @@
 import { Component, Host, h, State } from '@stencil/core';
-import { createRouter, Route, href } from 'stencil-router-v2';
+import { Route, href } from 'stencil-router-v2';
 import { InternalRouterState } from 'stencil-router-v2/dist/types';
-
-const Router = createRouter();
+import Router from '../../router.js';
 
 @Component({
   tag: 'app-load',
@@ -33,13 +32,13 @@ export class AppLoad {
               <div class="flex items-center">
                 <div
                   class={`text-l md:text-xl ${
-                    this.load == '/docs' ? 'text-primary border-primary' : 'hover:text-primary hover:border-primary'
+                    Router.url.pathname.substr(0, 5) == '/docs' ? 'text-primary border-primary' : 'hover:text-primary hover:border-primary'
                   } text-gray-400 border-b-2 border-white transition ease-out duration-500`}
                 >
-                  <a {...href('/docs')} class="hidden md:inline-block ">
+                  <a {...href('/docs/intro/getting-started')} class="hidden md:inline-block ">
                     Documentation
                   </a>
-                  <a {...href('/docs')} class="inline-block md:hidden">
+                  <a {...href('/docs/intro/getting-started')} class="inline-block md:hidden">
                     Docs
                   </a>
                 </div>
@@ -70,7 +69,7 @@ export class AppLoad {
               <Route path="/">
                 <wc-home></wc-home>
               </Route>
-              <Route path="/docs">
+              <Route path={/^\/docs/}>
                 <wc-docs></wc-docs>
               </Route>
             </Router.Switch>
