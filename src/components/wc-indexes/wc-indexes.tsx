@@ -82,11 +82,11 @@ export class WcIndexes {
     }
     return (
       <div>
-        {indexesSearched.map((index: indexType, i: number) => {
+        {indexesSearched.map((index: indexType) => {
           return (
             <div class="text-sm text-gray-700">
               <button class="block pt-2.5 pb-1 text-sm font-semibold mx-4 transition duration-200 focus:outline-none focus:shadow-outline">{index.display}</button>
-              <div class={`index-${i} ml-10`}>
+              <div class={`ml-10`}>
                 {index.subIndexes
                   ? index.subIndexes.map(subIndex => {
                       return (
