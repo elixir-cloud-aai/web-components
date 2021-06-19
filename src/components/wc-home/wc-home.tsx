@@ -1,5 +1,5 @@
 import { Component, Host, h } from '@stencil/core';
-import Router from '../../router.js';
+import Router from '../../router';
 
 @Component({
   tag: 'wc-home',

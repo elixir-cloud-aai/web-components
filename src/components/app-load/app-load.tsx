@@ -1,7 +1,7 @@
 import { Component, Host, h, State } from '@stencil/core';
 import { Route, href } from 'stencil-router-v2';
 import { InternalRouterState } from 'stencil-router-v2/dist/types';
-import Router from '../../router.js';
+import Router from '../../router';
 
 @Component({
   tag: 'app-load',
