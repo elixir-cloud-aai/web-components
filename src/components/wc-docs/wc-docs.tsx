@@ -21,11 +21,7 @@ export class WcDocs {
       <Host>
         <div class="relative min-h-screen md:flex">
           <wc-indexes></wc-indexes>
-          {/* {this.renderContent()} */}
-          <div class="flex-1 m-5 md:m-10 overflow-y-visible">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eos quia aperiam veniam eaque, labore possimus fugit nostrum illo ullam explicabo iure cumque
-            itaque, tempore ad adipisci sapiente. Fugiat, adipisci.
-          </div>
+          <div class="flex-1 m-5 md:m-10 overflow-y-visible">{this.renderContent()}</div>
         </div>
       </Host>
     );

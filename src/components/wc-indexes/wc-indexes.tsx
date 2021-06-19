@@ -10,6 +10,7 @@ import Router from '../../router';
 })
 export class WcIndexes {
   @State() navOpen: Boolean = false;
+  @State() search: string = '';
 
   toggleIndex = (index: number) => {
     const subIndexes = document.querySelector(`.index-${index}`);
@@ -57,6 +58,58 @@ export class WcIndexes {
     this.navOpen = !this.navOpen;
   };
 
+  handleChange = e => {
+    this.search = (e.target as HTMLInputElement).value;
+  };
+
+  renderSearch = () => {
+    let indexesSearched: indexType[] = [];
+    for (let index = 0; index < indexes.length; index++) {
+      const indexedElement = indexes[index];
+      let subIndexArr = [];
+      for (let subIndex = 0; subIndex < indexedElement.subIndexes.length; subIndex++) {
+        const subIndexedElement = indexedElement.subIndexes[subIndex];
+        if (subIndexedElement.display.toLowerCase().includes(this.search.toLowerCase())) {
+          subIndexArr = [...subIndexArr, subIndexedElement];
+        }
+      }
+      if (subIndexArr.length > 0) {
+        indexesSearched = [...indexesSearched, { display: indexedElement.display, subIndexes: subIndexArr }];
+      }
+    }
+    if (indexesSearched.length === 0) {
+      return <div class="text-sm text-gray-400">No results found</div>;
+    }
+    return (
+      <div>
+        {indexesSearched.map((index: indexType, i: number) => {
+          return (
+            <div class="text-sm text-gray-700">
+              <button class="block pt-2.5 pb-1 text-sm font-semibold mx-4 transition duration-200 focus:outline-none focus:shadow-outline">{index.display}</button>
+              <div class={`index-${i} ml-10`}>
+                {index.subIndexes
+                  ? index.subIndexes.map(subIndex => {
+                      return (
+                        <button
+                          class={`block text-sm py-1 transition duration-200 focus:outline-none focus:shadow-outline`}
+                          onClick={() => {
+                            Router.push(subIndex.url);
+                            this.search = '';
+                          }}
+                        >
+                          {subIndex.display}
+                        </button>
+                      );
+                    })
+                  : ''}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
   render() {
     return (
       <Host>
@@ -92,12 +145,17 @@ export class WcIndexes {
             ) : (
               ''
             )}
-            <input
-              class="focus:shadow-md focus:border-gray-300 border rounded-lg  py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none focus:shadow-outline w-full"
-              type="text"
-              autocomplete="off"
-              placeholder="Search Docs"
-            />
+            <div class="relative">
+              <input
+                class="border-gray-300 focus:border-gray-600 text-sm border rounded-lg  py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none w-full"
+                type="text"
+                autocomplete="off"
+                placeholder="Search Documentation"
+                value={this.search}
+                onInput={e => this.handleChange(e)}
+              />
+              <div class={`absolute w-full text-sm bg-white border-2 border-gray-100 shadow-md p-3 mt-3 rounded ${this.search == '' ? 'hidden' : ''}`}>{this.renderSearch()}</div>
+            </div>
             {this.renderIndex()}
           </nav>
         </div>
