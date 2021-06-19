@@ -2,6 +2,7 @@ dist/
 www/
 loader/
 src/global/app.css
+/tailwind-default.config.js
 
 *~
 *.sw[mnpcod]
@@ -12,6 +13,9 @@ src/global/app.css
 log.txt
 *.sublime-project
 *.sublime-workspace
+.editorconfig
+.prettierrc.json
+
 
 .stencil/
 .idea/
