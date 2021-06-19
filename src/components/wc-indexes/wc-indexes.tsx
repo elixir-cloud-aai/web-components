@@ -60,9 +60,9 @@ export class WcIndexes {
   render() {
     return (
       <Host>
-        <div class="flex justify-between md:hidden overflow-y-visible">
+        <div class="flex justify-between ">
           <button
-            class="mobile-menu-button pl-4 focus:outline-none"
+            class="mobile-menu-button pl-4 focus:outline-none md:hidden"
             onClick={() => {
               this.handleToggleNav();
             }}
@@ -71,40 +71,33 @@ export class WcIndexes {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          <input
-            class="focus:shadow-md border m-5 focus:border-gray-300 rounded-lg w-full py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none focus:shadow-outline"
-            type="text"
-            autocomplete="off"
-            placeholder="Search Docs"
-          />
         </div>
 
         <div
           class={`wc-sidebar w-64 space-y-6 m-0 md:m-10 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out ${
-            this.navOpen ? 'bg-black text-blue-100 w-full p-5' : ''
+            this.navOpen ? 'bg-black text-blue-100 w-max p-5' : ''
           }`}
         >
-          {this.navOpen ? (
-            ''
-          ) : (
+          <nav class="relative">
+            {this.navOpen ? (
+              <div>
+                <button class="absolute top-0 right-0 focus:outline-none focus:shadow-outline" onClick={() => this.handleToggleNav()}>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <br></br>
+                <br></br>
+              </div>
+            ) : (
+              ''
+            )}
             <input
-              class="focus:shadow-md focus:border-gray-300 border rounded-lg w-full  py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none focus:shadow-outline"
+              class="focus:shadow-md focus:border-gray-300 border rounded-lg  py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none focus:shadow-outline w-full"
               type="text"
               autocomplete="off"
               placeholder="Search Docs"
             />
-          )}
-
-          <nav class="relative">
-            {this.navOpen ? (
-              <button class="absolute top-0 right-0 focus:outline-none focus:shadow-outline" onClick={() => this.handleToggleNav()}>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            ) : (
-              ''
-            )}
             {this.renderIndex()}
           </nav>
         </div>
