@@ -1,4 +1,5 @@
 import { Component, Host, h } from '@stencil/core';
+import Router from '../../router.js';
 
 @Component({
   tag: 'wc-home',
@@ -21,19 +22,18 @@ export class WcHome {
             <div class="text-xl text-gray-400">
               These provide you with the various lightweight, fast, reusable Web Components to be use in your application enviroment independently.
             </div>
-            <button class="text-lg mt-8 px-5 bg-secondary text-white focus:outline-none p-2 hover:shadow-xl transition ease-out duration-500 rounded-xl w-full md:w-max md:mr-10">
+            <button
+              class="text-lg mt-8 px-5 bg-secondary text-white focus:outline-none p-2 hover:shadow-xl transition ease-out duration-500 rounded-xl w-full md:w-max md:mr-10"
+              onClick={() => Router.push('/docs/intro/getting-started')}
+            >
               Get Started
             </button>
-            <button class="text-lg ml-0 mt-5 px-5 bg-gray-200 p-2 focus:outline-none shadow-inner rounded-xl  w-full md:w-max">
+            <button
+              class="text-lg ml-0 mt-5 px-5 bg-gray-200 p-2 focus:outline-none shadow-inner rounded-xl  w-full md:w-max"
+              onClick={() => navigator.clipboard.writeText('npm i @elixir/web-components')}
+            >
               <span class="mr-2 text-gray-400">$</span> npm i @elixir/web-components
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 inline ml-4 text-gray-400 hover:text-black"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                onClick={() => navigator.clipboard.writeText('npm i @elixir/web-components')}
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline ml-4 text-gray-400 hover:text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"

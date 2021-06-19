@@ -52,7 +52,7 @@ export class WcIndexes {
   };
 
   handleToggleNav = () => {
-    const nav = document.querySelector('.sidebar');
+    const nav = document.querySelector('.wc-sidebar');
     nav.classList.toggle('-translate-x-full');
     this.navOpen = !this.navOpen;
   };
@@ -72,15 +72,15 @@ export class WcIndexes {
             </svg>
           </button>
           <input
-            class="focus:shadow-md border m-5 focus:border-gray-300 rounded-lg w-full py-2 px-3 text-gray-500  focus:outline-none focus:shadow-outline"
+            class="focus:shadow-md border m-5 focus:border-gray-300 rounded-lg w-full py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none focus:shadow-outline"
             type="text"
             autocomplete="off"
-            placeholder="Search"
+            placeholder="Search Docs"
           />
         </div>
 
         <div
-          class={`sidebar w-64 space-y-6 m-0 md:m-10 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out ${
+          class={`wc-sidebar w-64 space-y-6 m-0 md:m-10 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out ${
             this.navOpen ? 'bg-black text-blue-100 w-full p-5' : ''
           }`}
         >
@@ -88,10 +88,10 @@ export class WcIndexes {
             ''
           ) : (
             <input
-              class="focus:shadow-md focus:border-gray-300 border rounded-lg w-full  py-2 px-3 text-gray-500 focus:outline-none focus:shadow-outline"
+              class="focus:shadow-md focus:border-gray-300 border rounded-lg w-full  py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none focus:shadow-outline"
               type="text"
               autocomplete="off"
-              placeholder="Search"
+              placeholder="Search Docs"
             />
           )}
 
