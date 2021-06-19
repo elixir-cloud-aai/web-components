@@ -10,7 +10,7 @@ export class WcHome {
     return (
       <Host>
         <div class="relative">
-          <div class="absolute right-10 md:right-40 -top-28">
+          <div class="absolute right-10 md:right-40 -top-28 -z-10">
             <img src="https://raw.githubusercontent.com/elixir-cloud-aai/logo/dev/logo.svg" class="inline-block mx-3 opacity-20 w-96 md:w-108"></img>
           </div>
           <div class="mx-10 md:ml-40 mt-28 mb-40 md:mb-56 md:mr-40 lg:mr-108 md:mt-40 static">
@@ -44,11 +44,11 @@ export class WcHome {
             </button>
           </div>
           <div class="mx-10 my-10 md:mx-40">
-            <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col lg:flex-row">
               <div class="text-3xl font-semibold md:text-4xl text-gray-700 flex-grow flex-1">
                 Who are <span class="text-gray-400">we</span>?
               </div>
-              <div class="text-lg md:text-xl text-gray-700 flex-1 mt-5 md:mt-0">
+              <div class="text-lg md:text-xl text-gray-700 flex-1 mt-5 lg:mt-0">
                 <span class="font-semibold text-primary hover:border-primary border-b-2 border-white transition ease-out duration-500">
                   <a href="#">Elixir Cloud components</a>
                 </span>{' '}
@@ -69,11 +69,11 @@ export class WcHome {
             </div>
           </div>
           <div class="mx-10 mt-28 md:mx-40">
-            <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col lg:flex-row">
               <div class="text-3xl font-semibold md:text-4xl text-gray-700 flex-grow flex-1">
                 Start by <span class="text-gray-400">building now</span>.
               </div>
-              <div class="text-lg md:text-xl text-gray-700 flex-1 mt-5 md:mt-0">
+              <div class="text-lg md:text-xl text-gray-700 flex-1 mt-5 lg:mt-0">
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mb-3 pt-2 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
