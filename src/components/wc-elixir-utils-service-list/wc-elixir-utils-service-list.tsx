@@ -6,24 +6,53 @@ const ServiceList = [
     desription:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora repudiandae quisquam? Voluptatum qui accusantium odit quibusdam ea rem deleniti dolor accusamus laborum! Vero magnam modi illum ad. Id, voluptates.',
     documentationUrl: 'https://docs.myservice.example.com',
+    organization: {
+      name: 'Organization 1',
+      url: 'https://example.com',
+    },
+    contactUrl: 'mailto:support@example.com',
+    version: '1.0.0',
+
+    id: 'org.ga4gh.myservice',
   },
   {
     name: 'Service 2',
     desription:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora repudiandae quisquam? Voluptatum qui accusantium odit quibusdam ea rem deleniti dolor accusamus laborum! Vero magnam modi illum ad. Id, voluptates.',
     documentationUrl: 'https://docs.myservice.example.com',
+    organization: {
+      name: 'Organization 2',
+      url: 'https://example.com',
+    },
+    contactUrl: 'mailto:support@example.com',
+    version: '1.0.0',
+    id: 'org.ga4gh.myservice',
   },
   {
     name: 'Service 3',
     desription:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora repudiandae quisquam? Voluptatum qui accusantium odit quibusdam ea rem deleniti dolor accusamus laborum! Vero magnam modi illum ad. Id, voluptates.',
     documentationUrl: 'https://docs.myservice.example.com',
+    organization: {
+      name: 'Organization 3',
+      url: 'https://example.com',
+    },
+    contactUrl: 'mailto:support@example.com',
+    version: '1.0.0',
+    id: 'org.ga4gh.myservice',
   },
   {
     name: 'Service 4',
     desription:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora repudiandae quisquam? Voluptatum qui accusantium odit quibusdam ea rem deleniti dolor accusamus laborum! Vero magnam modi illum ad. Id, voluptates.',
     documentationUrl: 'https://docs.myservice.example.com',
+    organization: {
+      name: 'Organization 4',
+      url: 'https://example.com',
+    },
+    contactUrl: 'mailto:support@example.com',
+    version: '1.0.0',
+    id: 'org.ga4gh.myservice',
   },
 ];
 @Component({
@@ -67,8 +96,47 @@ export class WcElixirUtilsServiceList {
             </div>
           </div>
           <div class={`wc-service-index-${index} ${this.serviceIsOpen[index] ? '' : 'hidden'} pt-2`}>
-            <a class="text-primary text-xs font-bold cursor-pointer border-b-2 border-white transition ease-out duration-500 hover:border-primary">{service.documentationUrl}</a>
+            <a
+              href={service.documentationUrl}
+              class="text-primary text-xs font-bold cursor-pointer border-b-2 border-white transition ease-out duration-500 hover:border-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {service.documentationUrl}
+            </a>
             <div class="text-gray-500">{service.desription}</div>
+            <br></br>
+            <div>
+              <div class="">
+                <span class="">Service Id:</span> <span class="font-mono">{service.id}</span>
+              </div>
+              <div class="text-base">
+                <span class="">Organization:</span> {service.organization.name}{' '}
+                <a href={service.organization.url} target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-1 ml-2 text-primary inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                    />
+                  </svg>
+                </a>
+                <a href={service.contactUrl} target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-1 ml-1.5 text-primary inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="text-base">
+                <span class="">Version:</span> <span class="font-mono">{service.version}</span>
+              </div>
+            </div>
           </div>
         </div>
       );
