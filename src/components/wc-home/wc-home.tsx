@@ -29,7 +29,7 @@ export class WcHome {
               Get Started
             </button>
             <button
-              class="text-lg ml-0 mt-5 px-5 bg-gray-200 p-2 focus:outline-none shadow-inner rounded-xl  w-full md:w-max"
+              class="text-lg ml-0 mt-5 px-5 bg-gray-200 p-2 focus:outline-none shadow-inner rounded-xl  w-full md:w-max cursor-text"
               onClick={() => navigator.clipboard.writeText('npm i @elixir/web-components')}
             >
               <span class="mr-2 text-gray-400">$</span> npm i @elixir/web-components
