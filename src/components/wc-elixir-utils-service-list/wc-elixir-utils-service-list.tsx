@@ -149,7 +149,7 @@ export class WcElixirUtilsServiceList {
           </svg>
         </button>
 
-        {selected.map((isSelected, index) => {
+        {selected.map((_isSelected, index) => {
           return (
             <button
               class={`mx-1 p-1 shadow rounded-lg hover:shadow-lg focus:outline-none h-9 w-9 ${this.page == index ? 'bg-primary text-white' : ''}`}
