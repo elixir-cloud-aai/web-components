@@ -147,7 +147,7 @@ export class WcIndexes {
             )}
             <div class="relative">
               <input
-                class="border-gray-300 focus:border-gray-600 text-sm border rounded-lg  py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none w-full"
+                class="border-gray-300 focus:shadow text-sm border-2 rounded-lg  py-2 px-3 text-gray-500 focus:text-gray-700 focus:outline-none w-full"
                 type="text"
                 autocomplete="off"
                 placeholder="Search Documentation"

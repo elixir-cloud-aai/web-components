@@ -10,7 +10,7 @@ export class WcDocs {
   renderContent = () => {
     switch (Router.url.pathname) {
       case '/docs/components/service-list':
-        return <wc-elixir-utils-service-list></wc-elixir-utils-service-list>;
+        return <app-service-list></app-service-list>;
       default:
         break;
     }
