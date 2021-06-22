@@ -26,7 +26,7 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
     id: 'org.ga4gh.myservice',
-    type: 'Registered',
+    type: 'Added',
   },
   {
     name: 'Service 3',
@@ -81,7 +81,7 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
     id: 'org.ga4gh.myservice',
-    type: 'Registered',
+    type: 'Added',
   },
   {
     name: 'Service 7',
@@ -136,7 +136,7 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
     id: 'org.ga4gh.myservice',
-    type: 'Registered',
+    type: 'Added',
   },
   {
     name: 'Service 11',
@@ -191,7 +191,7 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
     id: 'org.ga4gh.myservice',
-    type: 'Registered',
+    type: 'Added',
   },
   {
     name: 'Service 15',
