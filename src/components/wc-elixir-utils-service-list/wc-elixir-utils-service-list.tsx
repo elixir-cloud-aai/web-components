@@ -14,6 +14,7 @@ const ServiceList = [
     version: '1.0.0',
 
     id: 'org.ga4gh.myservice',
+    type: 'Owned',
   },
   {
     name: 'Service 2',
@@ -27,6 +28,7 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
     id: 'org.ga4gh.myservice',
+    type: 'Registered',
   },
   {
     name: 'Service 3',
@@ -86,13 +88,24 @@ export class WcElixirUtilsServiceList {
           <div class={`flex justify-between cursor-pointer focus:outline-none ${this.serviceIsOpen[index] ? 'border-b-2 pb-2' : ''}`} onClick={() => this.toggleOpen(index)}>
             <div class={`title text-lg font-semibold`}>{service.name}</div>
             <div class="mt-0.5">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <span class="text-xs italic font-extralight mr-2">{service.type}</span>
+              {this.serviceIsOpen[index] ? (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              )}
             </div>
           </div>
           <div class={`wc-service-index-${index} ${this.serviceIsOpen[index] ? '' : 'hidden'} pt-2`}>
@@ -136,6 +149,32 @@ export class WcElixirUtilsServiceList {
               <div class="text-base">
                 <span class="">Version:</span> <span class="font-mono">{service.version}</span>
               </div>
+            </div>
+            <br></br>
+            <div class="text-sm">
+              {service.type ? (
+                service.type == 'Owned' ? (
+                  <div class="md:flex md:justify-between">
+                    <div>
+                      <button class="bg-primary rounded-lg px-4 py-2 md:mr-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Edit Service</button>
+                      <button class="bg-secondary rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Manage Permission</button>
+                    </div>
+                    <div class="">
+                      <button class="bg-red-500 rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Revoke Authorization</button>
+                      <button class="bg-gray-300 rounded-lg px-4 py-2 md:mx-2 my-2 text-gray-500 hover:shadow-lg focus:outline-none w-full md:w-auto">Remove Service</button>
+                    </div>
+                  </div>
+                ) : (
+                  <div class="md:flex md:justify-end">
+                    <button class="bg-red-500 rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Revoke Authorization</button>
+                    <button class="bg-gray-300 rounded-lg px-4 py-2 md:mx-2 my-2 text-gray-500 hover:shadow-lg focus:outline-none w-full md:w-auto">Remove Service</button>
+                  </div>
+                )
+              ) : (
+                <div class="flex justify-end">
+                  <button class="bg-secondary rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Add Service</button>
+                </div>
+              )}
             </div>
           </div>
         </div>
