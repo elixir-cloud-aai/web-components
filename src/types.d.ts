@@ -3,4 +3,10 @@ interface indexType {
   subIndexes: { display: string; url: string }[];
 }
 
-export { indexType };
+interface componentProps {
+  name: string;
+  type: string;
+  default?: string;
+}
+
+export { indexType, componentProps };
