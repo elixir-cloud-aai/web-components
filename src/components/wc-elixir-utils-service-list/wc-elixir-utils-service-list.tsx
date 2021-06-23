@@ -12,10 +12,11 @@ export class WcElixirUtilsServiceList {
   @State() serviceIsOpen: boolean[];
   @State() page: number = 0;
   @State() searchService: string = '';
+  @State() services: any[] = ServiceList;
 
   componentWillLoad = () => {
     let tempServiceIsOpen: boolean[] = [];
-    ServiceList.forEach(() => {
+    this.services.forEach(() => {
       tempServiceIsOpen = [...tempServiceIsOpen, false];
     });
     this.serviceIsOpen = [...tempServiceIsOpen];
@@ -28,9 +29,11 @@ export class WcElixirUtilsServiceList {
   };
 
   renderServices = () => {
+    var services = this.services;
+    services = services.filter(service => service.name.toLowerCase().includes(this.searchService.toLowerCase()));
     var startIndex = this.page * this.itemsPerPage;
     var endIndex = startIndex + this.itemsPerPage;
-    return ServiceList.map((service, index) => {
+    return services.map((service, index) => {
       if (index < endIndex && index >= startIndex) {
         return (
           <div class={`flex-row border-2 border-gray-100 rounded-lg hover:shadow-md mt-2 px-3 py-2 ${this.serviceIsOpen[index] ? 'shadow-md' : 'shadow-sm'}`}>
@@ -133,7 +136,9 @@ export class WcElixirUtilsServiceList {
   };
 
   renderPagination = () => {
-    let totalPages = Math.ceil(ServiceList.length / this.itemsPerPage);
+    var services = this.services;
+    services = services.filter(service => service.name.toLowerCase().includes(this.searchService.toLowerCase()));
+    let totalPages = Math.ceil(services.length / this.itemsPerPage);
     let selected = [true];
     for (let index = 0; index < totalPages - 1; index++) {
       selected = [...selected, false];
@@ -179,7 +184,6 @@ export class WcElixirUtilsServiceList {
   };
 
   renderSearchBar = () => {
-    console.log(this.searchService);
     return (
       <div class="flex">
         <input
