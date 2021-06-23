@@ -108,10 +108,10 @@ export class WcElixirUtilsServiceList {
                   service.type == 'Owned' ? (
                     <div class="md:flex md:justify-between">
                       <div>
-                        <button class="bg-primary rounded-lg px-4 py-2 md:mr-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Edit Service</button>
-                        <button class="bg-secondary rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Manage Permission</button>
+                        <button class="bg-primary rounded-lg px-4 py-2 md:mr-4 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Edit Service</button>
+                        <button class="bg-secondary rounded-lg px-4 py-2 md:mr-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Manage Permission</button>
                       </div>
-                      <div class="">
+                      <div>
                         <button class="bg-red-500 rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Revoke Authorization</button>
                         <button class="bg-gray-300 rounded-lg px-4 py-2 md:mx-2 my-2 text-gray-500 hover:shadow-lg focus:outline-none w-full md:w-auto">Remove Service</button>
                       </div>
