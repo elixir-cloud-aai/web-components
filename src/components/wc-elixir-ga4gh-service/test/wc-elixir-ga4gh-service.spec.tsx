@@ -10,7 +10,7 @@ describe('wc-elixir-ga4gh-service', () => {
     expect(page.root).toEqualHtml(`
       <wc-elixir-ga4gh-service>
         <mock:shadow-root>
-          <slot></slot>
+          Service Component
         </mock:shadow-root>
       </wc-elixir-ga4gh-service>
     `);

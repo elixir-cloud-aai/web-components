@@ -19,7 +19,7 @@ export namespace Components {
     interface WcElixirUtilsNewService {
     }
     interface WcElixirUtilsServiceList {
-        "authToken"?: any;
+        "authToken": string;
         "itemsPerPage"?: number;
     }
     interface WcHome {
@@ -108,7 +108,7 @@ declare namespace LocalJSX {
     interface WcElixirUtilsNewService {
     }
     interface WcElixirUtilsServiceList {
-        "authToken"?: any;
+        "authToken"?: string;
         "itemsPerPage"?: number;
     }
     interface WcHome {

@@ -7,14 +7,17 @@ import ServiceList from '../../data/service';
   scoped: true,
 })
 export class WcElixirUtilsServiceList {
-  @Prop() authToken?: any;
+  @Prop() authToken: string;
   @Prop() itemsPerPage?: number = 5;
   @State() serviceIsOpen: boolean[];
   @State() page: number = 0;
   @State() searchService: string = '';
-  @State() services: any[] = ServiceList;
+  @State() services: any[];
 
   componentWillLoad = () => {
+    if (this.authToken == 'component-demo') {
+      this.services = ServiceList;
+    }
     let tempServiceIsOpen: boolean[] = [];
     this.services.forEach(() => {
       tempServiceIsOpen = [...tempServiceIsOpen, false];
