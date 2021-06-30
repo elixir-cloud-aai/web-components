@@ -6,11 +6,17 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppDocs {
+    }
+    interface AppHome {
+    }
+    interface AppIndexes {
+    }
     interface AppLoad {
     }
-    interface AppServiceList {
+    interface AppManagePermission {
     }
-    interface WcDocs {
+    interface AppServiceList {
     }
     interface WcElixirGa4ghService {
     }
@@ -22,29 +28,43 @@ export namespace Components {
         "authToken": string;
         "itemsPerPage"?: number;
     }
-    interface WcHome {
-    }
-    interface WcIndexes {
-    }
 }
 declare global {
+    interface HTMLAppDocsElement extends Components.AppDocs, HTMLStencilElement {
+    }
+    var HTMLAppDocsElement: {
+        prototype: HTMLAppDocsElement;
+        new (): HTMLAppDocsElement;
+    };
+    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
+    }
+    var HTMLAppHomeElement: {
+        prototype: HTMLAppHomeElement;
+        new (): HTMLAppHomeElement;
+    };
+    interface HTMLAppIndexesElement extends Components.AppIndexes, HTMLStencilElement {
+    }
+    var HTMLAppIndexesElement: {
+        prototype: HTMLAppIndexesElement;
+        new (): HTMLAppIndexesElement;
+    };
     interface HTMLAppLoadElement extends Components.AppLoad, HTMLStencilElement {
     }
     var HTMLAppLoadElement: {
         prototype: HTMLAppLoadElement;
         new (): HTMLAppLoadElement;
     };
+    interface HTMLAppManagePermissionElement extends Components.AppManagePermission, HTMLStencilElement {
+    }
+    var HTMLAppManagePermissionElement: {
+        prototype: HTMLAppManagePermissionElement;
+        new (): HTMLAppManagePermissionElement;
+    };
     interface HTMLAppServiceListElement extends Components.AppServiceList, HTMLStencilElement {
     }
     var HTMLAppServiceListElement: {
         prototype: HTMLAppServiceListElement;
         new (): HTMLAppServiceListElement;
-    };
-    interface HTMLWcDocsElement extends Components.WcDocs, HTMLStencilElement {
-    }
-    var HTMLWcDocsElement: {
-        prototype: HTMLWcDocsElement;
-        new (): HTMLWcDocsElement;
     };
     interface HTMLWcElixirGa4ghServiceElement extends Components.WcElixirGa4ghService, HTMLStencilElement {
     }
@@ -70,36 +90,31 @@ declare global {
         prototype: HTMLWcElixirUtilsServiceListElement;
         new (): HTMLWcElixirUtilsServiceListElement;
     };
-    interface HTMLWcHomeElement extends Components.WcHome, HTMLStencilElement {
-    }
-    var HTMLWcHomeElement: {
-        prototype: HTMLWcHomeElement;
-        new (): HTMLWcHomeElement;
-    };
-    interface HTMLWcIndexesElement extends Components.WcIndexes, HTMLStencilElement {
-    }
-    var HTMLWcIndexesElement: {
-        prototype: HTMLWcIndexesElement;
-        new (): HTMLWcIndexesElement;
-    };
     interface HTMLElementTagNameMap {
+        "app-docs": HTMLAppDocsElement;
+        "app-home": HTMLAppHomeElement;
+        "app-indexes": HTMLAppIndexesElement;
         "app-load": HTMLAppLoadElement;
+        "app-manage-permission": HTMLAppManagePermissionElement;
         "app-service-list": HTMLAppServiceListElement;
-        "wc-docs": HTMLWcDocsElement;
         "wc-elixir-ga4gh-service": HTMLWcElixirGa4ghServiceElement;
         "wc-elixir-utils-manage-permissions": HTMLWcElixirUtilsManagePermissionsElement;
         "wc-elixir-utils-new-service": HTMLWcElixirUtilsNewServiceElement;
         "wc-elixir-utils-service-list": HTMLWcElixirUtilsServiceListElement;
-        "wc-home": HTMLWcHomeElement;
-        "wc-indexes": HTMLWcIndexesElement;
     }
 }
 declare namespace LocalJSX {
+    interface AppDocs {
+    }
+    interface AppHome {
+    }
+    interface AppIndexes {
+    }
     interface AppLoad {
     }
-    interface AppServiceList {
+    interface AppManagePermission {
     }
-    interface WcDocs {
+    interface AppServiceList {
     }
     interface WcElixirGa4ghService {
     }
@@ -111,35 +126,33 @@ declare namespace LocalJSX {
         "authToken"?: string;
         "itemsPerPage"?: number;
     }
-    interface WcHome {
-    }
-    interface WcIndexes {
-    }
     interface IntrinsicElements {
+        "app-docs": AppDocs;
+        "app-home": AppHome;
+        "app-indexes": AppIndexes;
         "app-load": AppLoad;
+        "app-manage-permission": AppManagePermission;
         "app-service-list": AppServiceList;
-        "wc-docs": WcDocs;
         "wc-elixir-ga4gh-service": WcElixirGa4ghService;
         "wc-elixir-utils-manage-permissions": WcElixirUtilsManagePermissions;
         "wc-elixir-utils-new-service": WcElixirUtilsNewService;
         "wc-elixir-utils-service-list": WcElixirUtilsServiceList;
-        "wc-home": WcHome;
-        "wc-indexes": WcIndexes;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-docs": LocalJSX.AppDocs & JSXBase.HTMLAttributes<HTMLAppDocsElement>;
+            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-indexes": LocalJSX.AppIndexes & JSXBase.HTMLAttributes<HTMLAppIndexesElement>;
             "app-load": LocalJSX.AppLoad & JSXBase.HTMLAttributes<HTMLAppLoadElement>;
+            "app-manage-permission": LocalJSX.AppManagePermission & JSXBase.HTMLAttributes<HTMLAppManagePermissionElement>;
             "app-service-list": LocalJSX.AppServiceList & JSXBase.HTMLAttributes<HTMLAppServiceListElement>;
-            "wc-docs": LocalJSX.WcDocs & JSXBase.HTMLAttributes<HTMLWcDocsElement>;
             "wc-elixir-ga4gh-service": LocalJSX.WcElixirGa4ghService & JSXBase.HTMLAttributes<HTMLWcElixirGa4ghServiceElement>;
             "wc-elixir-utils-manage-permissions": LocalJSX.WcElixirUtilsManagePermissions & JSXBase.HTMLAttributes<HTMLWcElixirUtilsManagePermissionsElement>;
             "wc-elixir-utils-new-service": LocalJSX.WcElixirUtilsNewService & JSXBase.HTMLAttributes<HTMLWcElixirUtilsNewServiceElement>;
             "wc-elixir-utils-service-list": LocalJSX.WcElixirUtilsServiceList & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceListElement>;
-            "wc-home": LocalJSX.WcHome & JSXBase.HTMLAttributes<HTMLWcHomeElement>;
-            "wc-indexes": LocalJSX.WcIndexes & JSXBase.HTMLAttributes<HTMLWcIndexesElement>;
         }
     }
 }

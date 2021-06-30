@@ -67,10 +67,10 @@ export class AppLoad {
           <div class="flex-grow">
             <Router.Switch>
               <Route path="/">
-                <wc-home></wc-home>
+                <app-home></app-home>
               </Route>
               <Route path={/^\/docs/}>
-                <wc-docs></wc-docs>
+                <app-docs></app-docs>
               </Route>
             </Router.Switch>
           </div>

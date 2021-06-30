@@ -2,15 +2,17 @@ import { Component, Host, h } from '@stencil/core';
 import Router from '../../router';
 
 @Component({
-  tag: 'wc-docs',
-  styleUrl: 'wc-docs.css',
+  tag: 'app-docs',
+  styleUrl: 'app-docs.css',
   scoped: true,
 })
-export class WcDocs {
+export class AppDocs {
   renderContent = () => {
     switch (Router.url.pathname) {
       case '/docs/components/service-list':
         return <app-service-list></app-service-list>;
+      case '/docs/components/manage-permission':
+        return <app-manage-permission></app-manage-permission>;
       default:
         break;
     }
@@ -20,7 +22,7 @@ export class WcDocs {
     return (
       <Host>
         <div class="relative min-h-screen md:flex">
-          <wc-indexes></wc-indexes>
+          <app-indexes></app-indexes>
           <div class="flex-1 m-5 md:m-10 overflow-y-visible">{this.renderContent()}</div>
         </div>
       </Host>
