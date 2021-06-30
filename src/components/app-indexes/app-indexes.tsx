@@ -4,11 +4,11 @@ import indexes from '../../indexes';
 import Router from '../../router';
 
 @Component({
-  tag: 'wc-indexes',
-  styleUrl: 'wc-indexes.css',
+  tag: 'app-indexes',
+  styleUrl: 'app-indexes.css',
   scoped: true,
 })
-export class WcIndexes {
+export class AppIndexes {
   @State() navOpen: Boolean = false;
   @State() search: string = '';
 

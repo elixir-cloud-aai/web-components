@@ -2,11 +2,11 @@ import { Component, Host, h } from '@stencil/core';
 import Router from '../../router';
 
 @Component({
-  tag: 'wc-home',
-  styleUrl: 'wc-home.css',
+  tag: 'app-home',
+  styleUrl: 'app-home.css',
   scoped: true,
 })
-export class WcHome {
+export class AppHome {
   render() {
     return (
       <Host>

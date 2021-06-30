@@ -25,6 +25,10 @@ const indexes: indexType[] = [
         display: 'Service List',
         url: '/docs/components/service-list',
       },
+      {
+        display: 'Manage Permission',
+        url: '/docs/components/manage-permission',
+      },
     ],
   },
 ];
