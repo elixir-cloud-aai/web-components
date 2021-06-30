@@ -13,6 +13,7 @@ export class WcElixirUtilsServiceList {
   @State() page: number = 0;
   @State() searchService: string = '';
   @State() services: any[];
+  @State() filter: string = 'Filter';
 
   componentWillLoad = () => {
     if (this.authToken == 'component-demo') {
@@ -34,6 +35,13 @@ export class WcElixirUtilsServiceList {
   renderServices = () => {
     var services = this.services;
     services = services.filter(service => service.name.toLowerCase().includes(this.searchService.toLowerCase()));
+    if (this.filter !== 'Filter') {
+      if (this.filter === 'Other') {
+        services = services.filter(service => !service.type);
+      } else {
+        services = services.filter(service => service.type == this.filter);
+      }
+    }
     var startIndex = this.page * this.itemsPerPage;
     var endIndex = startIndex + this.itemsPerPage;
     return services.map((service, index) => {
@@ -141,6 +149,13 @@ export class WcElixirUtilsServiceList {
   renderPagination = () => {
     var services = this.services;
     services = services.filter(service => service.name.toLowerCase().includes(this.searchService.toLowerCase()));
+    if (this.filter !== 'Filter') {
+      if (this.filter === 'Other') {
+        services = services.filter(service => !service.type);
+      } else {
+        services = services.filter(service => service.type == this.filter);
+      }
+    }
     let totalPages = Math.ceil(services.length / this.itemsPerPage);
     let selected = [true];
     for (let index = 0; index < totalPages - 1; index++) {
@@ -186,16 +201,30 @@ export class WcElixirUtilsServiceList {
     this.searchService = (e.target as HTMLInputElement).value;
   };
 
+  handleFilterClick = () => {
+    if (this.filter === 'Filter') {
+      this.filter = 'Owned';
+    } else if (this.filter === 'Owned') {
+      this.filter = 'Added';
+    } else if (this.filter === 'Added') {
+      this.filter = 'Other';
+    } else {
+      this.filter = 'Filter';
+    }
+  };
+
   renderSearchBar = () => {
     return (
       <div class="flex">
         <input
-          class="w-full text-sm border-2 py-2 px-3 focus:outline-none rounded-lg focus:shadow"
+          class="flex-1 text-sm border-2 py-2 px-3 border-r-0 focus:outline-none rounded-l-lg focus:shadow"
           placeholder="Search by service name..."
           value={this.searchService}
           onInput={e => this.handleSearchQuery(e)}
         ></input>
-        {/* <button>Filter</button> */}
+        <button class="py-2 px-5 bg-primary text-sm text-white rounded-r-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
+          {this.filter}
+        </button>
       </div>
     );
   };
