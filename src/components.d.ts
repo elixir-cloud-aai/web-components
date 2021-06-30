@@ -21,6 +21,7 @@ export namespace Components {
     interface WcElixirGa4ghService {
     }
     interface WcElixirUtilsManagePermissions {
+        "authToken": string;
     }
     interface WcElixirUtilsNewService {
     }
@@ -119,6 +120,7 @@ declare namespace LocalJSX {
     interface WcElixirGa4ghService {
     }
     interface WcElixirUtilsManagePermissions {
+        "authToken"?: string;
     }
     interface WcElixirUtilsNewService {
     }

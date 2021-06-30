@@ -7,7 +7,12 @@ import { componentProps } from '../../types';
   scoped: true,
 })
 export class AppManagePermission {
-  @State() componentProps: componentProps[] = [];
+  @State() componentProps: componentProps[] = [
+    {
+      name: 'authToken',
+      type: 'string',
+    },
+  ];
 
   renderProps = () => {
     return this.componentProps.map(prop => {
@@ -31,7 +36,7 @@ export class AppManagePermission {
           <div class="border-gray-100 rounded-lg p-3 border-2 my-10">
             <div class="text-sm font-semibold w-full border-b-2 border-gray-100 pb-2">Component Demo</div>
             <div class="mt-4">
-              <wc-elixir-utils-manage-permissions></wc-elixir-utils-manage-permissions>
+              <wc-elixir-utils-manage-permissions authToken="component-demo"></wc-elixir-utils-manage-permissions>
             </div>
           </div>
           <div class="text-3xl my-5">Usage</div>
