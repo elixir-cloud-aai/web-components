@@ -12,6 +12,11 @@ export class AppManagePermission {
       name: 'authToken',
       type: 'string',
     },
+    {
+      name: 'itemsPerPage',
+      type: 'number',
+      default: '5',
+    },
   ];
 
   renderProps = () => {
