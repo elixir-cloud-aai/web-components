@@ -13,6 +13,7 @@ export class WcElixirUtilsManagePermissions {
   @State() page: number = 0;
   @State() service: any;
   @State() users: any[];
+  @State() searchUser: string = '';
 
   componentWillLoad = () => {
     if (this.authToken == 'component-demo') {
@@ -29,9 +30,11 @@ export class WcElixirUtilsManagePermissions {
   };
 
   renderUsers = () => {
+    var users = this.users;
+    users = users.filter(user => user.name.toLowerCase().includes(this.searchUser.toLowerCase()) || user.email.toLowerCase().includes(this.searchUser.toLowerCase()));
     var startIndex = this.page * this.itemsPerPage;
     var endIndex = startIndex + this.itemsPerPage;
-    return this.users.map((user, index) => {
+    return users.map((user, index) => {
       if (index < endIndex && index >= startIndex) {
         return (
           <div>
@@ -107,6 +110,26 @@ export class WcElixirUtilsManagePermissions {
     );
   };
 
+  handleSearchQuery = e => {
+    this.searchUser = (e.target as HTMLInputElement).value;
+  };
+
+  renderSearchBar = () => {
+    return (
+      <div class="flex">
+        <input
+          class="flex-1 text-sm border-2 py-2 px-3 focus:outline-none rounded-lg focus:shadow"
+          placeholder="Search by user's name or email..."
+          value={this.searchUser}
+          onInput={e => this.handleSearchQuery(e)}
+        ></input>
+        {/* <button class="py-2 px-5 bg-primary text-sm text-white rounded-r-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
+          {this.searchUser}
+        </button> */}
+      </div>
+    );
+  };
+
   render() {
     if (!this.service) {
       return (
@@ -131,8 +154,9 @@ export class WcElixirUtilsManagePermissions {
           <div class="text-lg font-semibold">Manage Permissions</div>
           <div class="text-gray-700">{this.service.name}</div>
         </div>
+        <br></br>
+        {this.renderSearchBar()}
         {this.renderUsers()}
-
         <br></br>
         {this.renderPagination()}
       </Host>
