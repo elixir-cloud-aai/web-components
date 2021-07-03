@@ -1,5 +1,6 @@
 import { Component, Host, h, Prop, State } from '@stencil/core';
 import ServiceList from '../../data/service';
+import UserList from '../../data/users';
 
 @Component({
   tag: 'wc-elixir-utils-manage-permissions',
@@ -8,12 +9,102 @@ import ServiceList from '../../data/service';
 })
 export class WcElixirUtilsManagePermissions {
   @Prop() authToken: string;
+  @Prop() itemsPerPage?: number = 5;
+  @State() page: number = 0;
   @State() service: any;
+  @State() users: any[];
 
   componentWillLoad = () => {
     if (this.authToken == 'component-demo') {
       this.service = ServiceList[0];
     }
+    this.users = UserList;
+  };
+
+  toggleCheck = id => {
+    var users = this.users;
+    var index = users.findIndex(user => user.id == id);
+    users[index].checked = !users[index].checked;
+    this.users = [...users];
+  };
+
+  renderUsers = () => {
+    var startIndex = this.page * this.itemsPerPage;
+    var endIndex = startIndex + this.itemsPerPage;
+    return this.users.map((user, index) => {
+      if (index < endIndex && index >= startIndex) {
+        return (
+          <div>
+            <div class="flex items-center justify-between border-2 border-gray-100 rounded-lg hover:shadow-md mt-2 px-3 py-2" onClick={() => this.toggleCheck(user.id)}>
+              <div>
+                <div class="">
+                  <div class={`title text-base font-semibold`}>
+                    <span>{user.name}</span> <span class={`title text-xs font-extralight italic hidden lg:inline-block`}>- {user.email}</span>
+                  </div>
+                  <div class={`title text-xs font-extralight italic lg:hidden`}>{user.email}</div>
+                </div>
+              </div>
+              {user.checked ? (
+                <div class="`w-5 h-4 border-2 border-primary  bg-primary rounded-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white " viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              ) : (
+                <div class={`w-4 h-4 border-2 rounded-md`}></div>
+              )}
+            </div>
+          </div>
+        );
+      }
+    });
+  };
+
+  renderPagination = () => {
+    var users = this.users;
+    let totalPages = Math.ceil(users.length / this.itemsPerPage);
+    let selected = [true];
+    for (let index = 0; index < totalPages - 1; index++) {
+      selected = [...selected, false];
+    }
+    return (
+      <div class="flex justify-center align-middle">
+        <button
+          class={`p-1.5 shadow rounded-full border-2 hover:shadow-lg focus:outline-none border-gray-100 h-9 w-9 mr-3 ${this.page == 0 ? 'invisible' : ''}`}
+          onClick={() => (this.page = this.page - 1)}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        {selected.map((_isSelected, index) => {
+          return (
+            <button
+              class={`mx-1 p-1 shadow rounded-lg hover:shadow-lg focus:outline-none h-9 w-9 ${this.page == index ? 'bg-primary text-white' : ''}`}
+              onClick={() => {
+                this.page = index;
+              }}
+            >
+              {index + 1}
+            </button>
+          );
+        })}
+
+        <button
+          class={`p-1.5 shadow rounded-full border-2 hover:shadow-lg focus:outline-none border-gray-100 h-9 w-9 ml-3 ${this.page == totalPages - 1 ? 'invisible' : ''}`}
+          onClick={() => (this.page = this.page + 1)}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+    );
   };
 
   render() {
@@ -40,6 +131,10 @@ export class WcElixirUtilsManagePermissions {
           <div class="text-lg font-semibold">Manage Permissions</div>
           <div class="text-gray-700">{this.service.name}</div>
         </div>
+        {this.renderUsers()}
+
+        <br></br>
+        {this.renderPagination()}
       </Host>
     );
   }

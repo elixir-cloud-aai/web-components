@@ -22,6 +22,7 @@ export namespace Components {
     }
     interface WcElixirUtilsManagePermissions {
         "authToken": string;
+        "itemsPerPage"?: number;
     }
     interface WcElixirUtilsNewService {
     }
@@ -121,6 +122,7 @@ declare namespace LocalJSX {
     }
     interface WcElixirUtilsManagePermissions {
         "authToken"?: string;
+        "itemsPerPage"?: number;
     }
     interface WcElixirUtilsNewService {
     }
