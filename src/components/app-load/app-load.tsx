@@ -43,7 +43,7 @@ export class AppLoad {
                   </a>
                 </div>
                 <div class="">
-                  <a href="https://github.com/git-anurag-hub/web-components" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/elixir-cloud-aai/web-components" target="_blank" rel="noopener noreferrer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="w-8 h-8 md:w-10 md:h-10 p-1 mx-10 icon icon-tabler icon-tabler-brand-github hover:border-primary border-b-2 rounded-full  border-white transition ease-out duration-500"
@@ -80,7 +80,7 @@ export class AppLoad {
             </a>
             <br></br>
             <br></br>© 2021 Web-Components. Released under{' '}
-            <a href="https://github.com/git-anurag-hub/web-components/blob/master/LICENSE" class="border-b-2 border-gray-400" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/elixir-cloud-aai/web-components/blob/master/LICENSE" class="border-b-2 border-gray-400" target="_blank" rel="noopener noreferrer">
               MIT License
             </a>
             <br></br>
@@ -111,7 +111,7 @@ export class AppLoad {
                   <path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6" />
                 </svg>
               </a>
-              <a href="https://github.com/git-anurag-hub/web-components" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/elixir-cloud-aai/web-components" target="_blank" rel="noopener noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="w-5 mx-4 icon icon-tabler icon-tabler-brand-github"
