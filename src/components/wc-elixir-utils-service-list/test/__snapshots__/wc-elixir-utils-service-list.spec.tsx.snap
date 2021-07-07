@@ -6,9 +6,9 @@ Object {
   <div>
     <wc-elixir-utils-service-list>
       <div class="flex">
-        <input class="border-2 border-r-0 flex-1 focus:outline-none focus:shadow px-3 py-2 rounded-l-lg text-sm" placeholder="Search by service name..." value="">
-        <button class="bg-primary focus:outline-none px-5 py-2 rounded-r-lg text-sm text-white w-24">
-          Filter
+        <input class="border-2 flex-1 focus:outline-none focus:shadow mr-2 px-3 py-2 rounded-lg text-sm" placeholder="Search by service name..." value="">
+        <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-sm text-white w-24">
+          All
         </button>
       </div>
       <div class="border-gray-200">
@@ -494,9 +494,9 @@ Object {
   <div>
     <wc-elixir-utils-service-list>
       <div class="flex">
-        <input class="border-2 border-r-0 flex-1 focus:outline-none focus:shadow px-3 py-2 rounded-l-lg text-sm" placeholder="Search by service name..." value="">
-        <button class="bg-primary focus:outline-none px-5 py-2 rounded-r-lg text-sm text-white w-24">
-          Filter
+        <input class="border-2 flex-1 focus:outline-none focus:shadow mr-2 px-3 py-2 rounded-lg text-sm" placeholder="Search by service name..." value="">
+        <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-sm text-white w-24">
+          All
         </button>
       </div>
       <div class="border-gray-200">

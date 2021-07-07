@@ -14,6 +14,7 @@ export class WcElixirUtilsManagePermissions {
   @State() service: any;
   @State() users: any[];
   @State() searchUser: string = '';
+  @State() filter: string = 'All';
 
   componentWillLoad = () => {
     if (this.authToken == 'component-demo') {
@@ -32,6 +33,13 @@ export class WcElixirUtilsManagePermissions {
   renderUsers = () => {
     var users = this.users;
     users = users.filter(user => user.name.toLowerCase().includes(this.searchUser.toLowerCase()) || user.email.toLowerCase().includes(this.searchUser.toLowerCase()));
+    if (this.filter !== 'All') {
+      if (this.filter === 'Allowed') {
+        users = users.filter(user => user.checked);
+      } else {
+        users = users.filter(user => !user.checked);
+      }
+    }
     var startIndex = this.page * this.itemsPerPage;
     var endIndex = startIndex + this.itemsPerPage;
     return users.map((user, index) => {
@@ -69,6 +77,14 @@ export class WcElixirUtilsManagePermissions {
 
   renderPagination = () => {
     var users = this.users;
+    users = users.filter(user => user.name.toLowerCase().includes(this.searchUser.toLowerCase()) || user.email.toLowerCase().includes(this.searchUser.toLowerCase()));
+    if (this.filter !== 'All') {
+      if (this.filter === 'Allowed') {
+        users = users.filter(user => user.checked);
+      } else {
+        users = users.filter(user => !user.checked);
+      }
+    }
     let totalPages = Math.ceil(users.length / this.itemsPerPage);
     let selected = [true];
     for (let index = 0; index < totalPages - 1; index++) {
@@ -114,7 +130,15 @@ export class WcElixirUtilsManagePermissions {
     this.searchUser = (e.target as HTMLInputElement).value;
   };
 
-  handleFilterClick = () => {};
+  handleFilterClick = () => {
+    if (this.filter === 'All') {
+      this.filter = 'Allowed';
+    } else if (this.filter === 'Allowed') {
+      this.filter = 'Not-Allowed';
+    } else if (this.filter === 'Not-Allowed') {
+      this.filter = 'All';
+    }
+  };
 
   renderSearchBar = () => {
     return (
@@ -126,7 +150,7 @@ export class WcElixirUtilsManagePermissions {
           onInput={e => this.handleSearchQuery(e)}
         ></input>
         <button class="py-2 px-5 bg-primary text-sm text-white rounded-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
-          All
+          {this.filter}
         </button>
       </div>
     );
