@@ -12,6 +12,11 @@ export class AppManagePermission {
       name: 'authToken',
       type: 'string',
     },
+    {
+      name: 'itemsPerPage',
+      type: 'number',
+      default: '5',
+    },
   ];
 
   renderProps = () => {
@@ -41,7 +46,7 @@ export class AppManagePermission {
           </div>
           <div class="text-3xl my-5">Usage</div>
           <div class="text-2xl mt-5">Principle</div>
-          <div class="my-3 leading-7">Manage Permission component is user my the owner of the service & admin to manage the permission regarding the services.</div>
+          <div class="my-3 leading-7">Manage Permission component is used by the owner of the service & admin to manage the permission regarding the services.</div>
           <div class="text-2xl mt-5">Implementation</div>
           <div class="my-3 leading-7">
             This component can we used by:

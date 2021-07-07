@@ -13,7 +13,7 @@ export class WcElixirUtilsServiceList {
   @State() page: number = 0;
   @State() searchService: string = '';
   @State() services: any[];
-  @State() filter: string = 'Filter';
+  @State() filter: string = 'All';
 
   componentWillLoad = () => {
     if (this.authToken == 'component-demo') {
@@ -35,7 +35,7 @@ export class WcElixirUtilsServiceList {
   renderServices = () => {
     var services = this.services;
     services = services.filter(service => service.name.toLowerCase().includes(this.searchService.toLowerCase()));
-    if (this.filter !== 'Filter') {
+    if (this.filter !== 'All') {
       if (this.filter === 'Other') {
         services = services.filter(service => !service.type);
       } else {
@@ -149,7 +149,7 @@ export class WcElixirUtilsServiceList {
   renderPagination = () => {
     var services = this.services;
     services = services.filter(service => service.name.toLowerCase().includes(this.searchService.toLowerCase()));
-    if (this.filter !== 'Filter') {
+    if (this.filter !== 'All') {
       if (this.filter === 'Other') {
         services = services.filter(service => !service.type);
       } else {
@@ -202,14 +202,14 @@ export class WcElixirUtilsServiceList {
   };
 
   handleFilterClick = () => {
-    if (this.filter === 'Filter') {
+    if (this.filter === 'All') {
       this.filter = 'Owned';
     } else if (this.filter === 'Owned') {
       this.filter = 'Added';
     } else if (this.filter === 'Added') {
       this.filter = 'Other';
     } else {
-      this.filter = 'Filter';
+      this.filter = 'All';
     }
   };
 
@@ -217,12 +217,12 @@ export class WcElixirUtilsServiceList {
     return (
       <div class="flex">
         <input
-          class="flex-1 text-sm border-2 py-2 px-3 border-r-0 focus:outline-none rounded-l-lg focus:shadow"
+          class="flex-1 text-sm border-2 py-2 px-3 focus:outline-none rounded-lg focus:shadow mr-2"
           placeholder="Search by service name..."
           value={this.searchService}
           onInput={e => this.handleSearchQuery(e)}
         ></input>
-        <button class="py-2 px-5 bg-primary text-sm text-white rounded-r-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
+        <button class="py-2 px-5 bg-primary text-sm text-white rounded-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
           {this.filter}
         </button>
       </div>
