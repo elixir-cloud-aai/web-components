@@ -114,18 +114,20 @@ export class WcElixirUtilsManagePermissions {
     this.searchUser = (e.target as HTMLInputElement).value;
   };
 
+  handleFilterClick = () => {};
+
   renderSearchBar = () => {
     return (
       <div class="flex">
         <input
-          class="flex-1 text-sm border-2 py-2 px-3 focus:outline-none rounded-lg focus:shadow"
+          class="flex-1 text-sm border-2 mr-2 py-2 px-3 focus:outline-none rounded-lg focus:shadow"
           placeholder="Search by user's name or email..."
           value={this.searchUser}
           onInput={e => this.handleSearchQuery(e)}
         ></input>
-        {/* <button class="py-2 px-5 bg-primary text-sm text-white rounded-r-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
-          {this.searchUser}
-        </button> */}
+        <button class="py-2 px-5 bg-primary text-sm text-white rounded-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
+          All
+        </button>
       </div>
     );
   };
