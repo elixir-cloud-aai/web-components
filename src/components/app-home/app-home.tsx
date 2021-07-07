@@ -116,7 +116,7 @@ export class AppHome {
                   </svg>
                   Open Source.{' '}
                   <span class="text-xs font-semibold text-primary hover:border-primary border-b-2 border-white transition ease-out duration-500">
-                    <a href="https://github.com/git-anurag-hub/web-components" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/elixir-cloud-aai/web-components" target="_blank" rel="noopener noreferrer">
                       Contribute Now
                     </a>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
