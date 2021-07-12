@@ -16,6 +16,8 @@ export namespace Components {
     }
     interface AppManagePermission {
     }
+    interface AppNewService {
+    }
     interface AppServiceList {
     }
     interface WcElixirGa4ghService {
@@ -62,6 +64,12 @@ declare global {
         prototype: HTMLAppManagePermissionElement;
         new (): HTMLAppManagePermissionElement;
     };
+    interface HTMLAppNewServiceElement extends Components.AppNewService, HTMLStencilElement {
+    }
+    var HTMLAppNewServiceElement: {
+        prototype: HTMLAppNewServiceElement;
+        new (): HTMLAppNewServiceElement;
+    };
     interface HTMLAppServiceListElement extends Components.AppServiceList, HTMLStencilElement {
     }
     var HTMLAppServiceListElement: {
@@ -98,6 +106,7 @@ declare global {
         "app-indexes": HTMLAppIndexesElement;
         "app-load": HTMLAppLoadElement;
         "app-manage-permission": HTMLAppManagePermissionElement;
+        "app-new-service": HTMLAppNewServiceElement;
         "app-service-list": HTMLAppServiceListElement;
         "wc-elixir-ga4gh-service": HTMLWcElixirGa4ghServiceElement;
         "wc-elixir-utils-manage-permissions": HTMLWcElixirUtilsManagePermissionsElement;
@@ -115,6 +124,8 @@ declare namespace LocalJSX {
     interface AppLoad {
     }
     interface AppManagePermission {
+    }
+    interface AppNewService {
     }
     interface AppServiceList {
     }
@@ -136,6 +147,7 @@ declare namespace LocalJSX {
         "app-indexes": AppIndexes;
         "app-load": AppLoad;
         "app-manage-permission": AppManagePermission;
+        "app-new-service": AppNewService;
         "app-service-list": AppServiceList;
         "wc-elixir-ga4gh-service": WcElixirGa4ghService;
         "wc-elixir-utils-manage-permissions": WcElixirUtilsManagePermissions;
@@ -152,6 +164,7 @@ declare module "@stencil/core" {
             "app-indexes": LocalJSX.AppIndexes & JSXBase.HTMLAttributes<HTMLAppIndexesElement>;
             "app-load": LocalJSX.AppLoad & JSXBase.HTMLAttributes<HTMLAppLoadElement>;
             "app-manage-permission": LocalJSX.AppManagePermission & JSXBase.HTMLAttributes<HTMLAppManagePermissionElement>;
+            "app-new-service": LocalJSX.AppNewService & JSXBase.HTMLAttributes<HTMLAppNewServiceElement>;
             "app-service-list": LocalJSX.AppServiceList & JSXBase.HTMLAttributes<HTMLAppServiceListElement>;
             "wc-elixir-ga4gh-service": LocalJSX.WcElixirGa4ghService & JSXBase.HTMLAttributes<HTMLWcElixirGa4ghServiceElement>;
             "wc-elixir-utils-manage-permissions": LocalJSX.WcElixirUtilsManagePermissions & JSXBase.HTMLAttributes<HTMLWcElixirUtilsManagePermissionsElement>;
