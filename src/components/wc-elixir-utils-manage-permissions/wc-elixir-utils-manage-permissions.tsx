@@ -23,7 +23,7 @@ export class WcElixirUtilsManagePermissions {
     this.users = UserList;
   };
 
-  toggleCheck = id => {
+  changePermission = id => {
     var users = this.users;
     var index = users.findIndex(user => user.id == id);
     users[index].checked = !users[index].checked;
@@ -34,10 +34,10 @@ export class WcElixirUtilsManagePermissions {
     var users = this.users;
     users = users.filter(user => user.name.toLowerCase().includes(this.searchUser.toLowerCase()) || user.email.toLowerCase().includes(this.searchUser.toLowerCase()));
     if (this.filter !== 'All') {
-      if (this.filter === 'Allowed') {
-        users = users.filter(user => user.checked);
+      if (this.filter === 'Not-Permitted') {
+        users = users.filter(user => !user.permission);
       } else {
-        users = users.filter(user => !user.checked);
+        users = users.filter(user => user.permission == this.filter);
       }
     }
     var startIndex = this.page * this.itemsPerPage;
@@ -46,7 +46,7 @@ export class WcElixirUtilsManagePermissions {
       if (index < endIndex && index >= startIndex) {
         return (
           <div>
-            <div class="flex items-center justify-between border-2 border-gray-100 rounded-lg hover:shadow-md mt-2 px-3 py-2" onClick={() => this.toggleCheck(user.id)}>
+            <div class="flex items-center justify-between border-2 border-gray-100 rounded-lg hover:shadow-md mt-2 px-3 py-2" onClick={() => this.changePermission(user.id)}>
               <div>
                 <div class="">
                   <div class={`title text-base font-semibold`}>
@@ -55,19 +55,17 @@ export class WcElixirUtilsManagePermissions {
                   <div class={`title text-xs font-extralight italic lg:hidden`}>{user.email}</div>
                 </div>
               </div>
-              {user.checked ? (
-                <div class="`w-5 h-4 border-2 border-primary  bg-primary rounded-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white " viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              ) : (
-                <div class={`w-4 h-4 border-2 rounded-md`}></div>
-              )}
+              <select id={user.id} class="text-sm outline-none">
+                <option value="" selected={!user.permission}>
+                  Not-Permitted
+                </option>
+                <option value="Permitted" selected={user.permission == 'Permitted'}>
+                  Permitted
+                </option>
+                <option value="Manager" selected={user.permission == 'Manager'}>
+                  Manager
+                </option>
+              </select>
             </div>
           </div>
         );
@@ -79,10 +77,10 @@ export class WcElixirUtilsManagePermissions {
     var users = this.users;
     users = users.filter(user => user.name.toLowerCase().includes(this.searchUser.toLowerCase()) || user.email.toLowerCase().includes(this.searchUser.toLowerCase()));
     if (this.filter !== 'All') {
-      if (this.filter === 'Allowed') {
-        users = users.filter(user => user.checked);
+      if (this.filter === 'Not-Permitted') {
+        users = users.filter(user => !user.permission);
       } else {
-        users = users.filter(user => !user.checked);
+        users = users.filter(user => user.permission == this.filter);
       }
     }
     let totalPages = Math.ceil(users.length / this.itemsPerPage);
@@ -132,12 +130,15 @@ export class WcElixirUtilsManagePermissions {
 
   handleFilterClick = () => {
     if (this.filter === 'All') {
-      this.filter = 'Allowed';
-    } else if (this.filter === 'Allowed') {
-      this.filter = 'Not-Allowed';
-    } else if (this.filter === 'Not-Allowed') {
+      this.filter = 'Manager';
+    } else if (this.filter === 'Manager') {
+      this.filter = 'Permitted';
+    } else if (this.filter === 'Permitted') {
+      this.filter = 'Not-Permitted';
+    } else if (this.filter === 'Not-Permitted') {
       this.filter = 'All';
     }
+    this.page = 0;
   };
 
   renderSearchBar = () => {
@@ -149,7 +150,7 @@ export class WcElixirUtilsManagePermissions {
           value={this.searchUser}
           onInput={e => this.handleSearchQuery(e)}
         ></input>
-        <button class="py-2 px-5 bg-primary text-sm text-white rounded-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
+        <button class="py-2 px-5 bg-primary text-xs text-white rounded-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
           {this.filter}
         </button>
       </div>
