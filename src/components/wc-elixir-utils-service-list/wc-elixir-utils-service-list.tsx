@@ -222,6 +222,7 @@ export class WcElixirUtilsServiceList {
     } else {
       this.filter = 'All';
     }
+    this.page = 0;
   };
 
   renderSearchBar = () => {
