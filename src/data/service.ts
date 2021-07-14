@@ -11,8 +11,9 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
 
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice1',
     type: 'Owned',
+    authorized: true,
   },
   {
     name: 'Service 2',
@@ -25,8 +26,9 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
-    type: 'Added',
+    id: 'org.ga4gh.myservice2',
+    type: 'Managed',
+    authorized: false,
   },
   {
     name: 'Service 3',
@@ -39,7 +41,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice3',
+    authorized: false,
   },
   {
     name: 'Service 4',
@@ -52,7 +55,9 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice4',
+    type: 'Managed',
+    authorized: true,
   },
   {
     name: 'Service 5',
@@ -66,8 +71,9 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
 
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice5',
     type: 'Owned',
+    authorized: false,
   },
   {
     name: 'Service 6',
@@ -80,8 +86,9 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
-    type: 'Added',
+    id: 'org.ga4gh.myservice6',
+    type: 'Authorized',
+    authorized: true,
   },
   {
     name: 'Service 7',
@@ -94,7 +101,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice7',
+    authorized: false,
   },
   {
     name: 'Service 8',
@@ -107,7 +115,9 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice8',
+    type: 'Managed',
+    authorized: false,
   },
   {
     name: 'Service 9',
@@ -121,8 +131,9 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
 
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice9',
     type: 'Owned',
+    authorized: true,
   },
   {
     name: 'Service 10',
@@ -135,8 +146,9 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
-    type: 'Added',
+    id: 'org.ga4gh.myservice10',
+    type: 'Managed',
+    authorized: false,
   },
   {
     name: 'Service 11',
@@ -149,7 +161,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice11',
+    authorized: true,
   },
   {
     name: 'Service 12',
@@ -162,7 +175,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice12',
+    authorized: true,
   },
   {
     name: 'Service 13',
@@ -176,8 +190,9 @@ const ServiceList = [
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
 
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice13',
     type: 'Owned',
+    authorized: true,
   },
   {
     name: 'Service 14',
@@ -190,8 +205,9 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
-    type: 'Added',
+    id: 'org.ga4gh.myservice14',
+    type: 'Managed',
+    authorized: true,
   },
   {
     name: 'Service 15',
@@ -204,7 +220,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice15',
+    authorized: false,
   },
   {
     name: 'Service 16',
@@ -217,7 +234,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice16',
+    authorized: true,
   },
   {
     name: 'Service 17',
@@ -230,7 +248,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice17',
+    authorized: false,
   },
   {
     name: 'Service 18',
@@ -243,7 +262,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice18',
+    authorized: true,
   },
   {
     name: 'Service 19',
@@ -256,7 +276,8 @@ const ServiceList = [
     },
     contactUrl: 'mailto:support@example.com',
     version: '1.0.0',
-    id: 'org.ga4gh.myservice',
+    id: 'org.ga4gh.myservice19',
+    authorized: true,
   },
 ];
 
