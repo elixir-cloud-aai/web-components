@@ -35,8 +35,7 @@ export class AppNewService {
           <div class="border-gray-100 rounded-lg p-3 border-2 my-10">
             <div class="text-sm font-semibold w-full border-b-2 border-gray-100 pb-2">Component Demo</div>
             <div class="mt-4">
-              In Development
-              {/* <wc-elixir-utils-service-list itemsPerPage={5} authToken="component-demo"></wc-elixir-utils-service-list> */}
+              <wc-elixir-utils-new-service></wc-elixir-utils-new-service>
             </div>
           </div>
           <div class="text-3xl my-5">Usage</div>

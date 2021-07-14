@@ -32,6 +32,15 @@ export class WcElixirUtilsServiceList {
     this.serviceIsOpen = [...tempServiceIsOpen];
   };
 
+  toggleAuth = id => {
+    console.log(id);
+    let services = this.services;
+    let serviceIndex = services.findIndex(service => service.id == id);
+    console.log(serviceIndex);
+    services[serviceIndex].authorized = !services[serviceIndex].authorized;
+    this.services = [...services];
+  };
+
   renderServices = () => {
     var services = this.services;
     services = services.filter(service => service.name.toLowerCase().includes(this.searchService.toLowerCase()));
@@ -115,29 +124,31 @@ export class WcElixirUtilsServiceList {
               </div>
               <br></br>
               <div class="text-sm">
-                {service.type ? (
-                  service.type == 'Owned' ? (
-                    <div class="md:flex md:justify-between">
-                      <div>
-                        <button class="bg-primary rounded-lg px-4 py-2 md:mr-4 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Edit Service</button>
-                        <button class="bg-secondary rounded-lg px-4 py-2 md:mr-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Manage Permission</button>
-                      </div>
-                      <div>
-                        <button class="bg-red-500 rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Revoke Authorization</button>
-                        <button class="bg-gray-300 rounded-lg px-4 py-2 md:mx-2 my-2 text-gray-500 hover:shadow-lg focus:outline-none w-full md:w-auto">Remove Service</button>
-                      </div>
+                <div class="md:flex md:justify-between">
+                  {service.type ? (
+                    <div>
+                      <button class="bg-primary rounded-lg px-4 py-2 md:mr-4 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Edit Service</button>
+                      <button class="bg-secondary rounded-lg px-4 py-2 md:mr-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Manage Permission</button>
+                      {service.type == 'Owned' ? (
+                        <button class="bg-gray-300 rounded-lg px-4 py-2 md:mx-2 my-2 text-gray-500 hover:shadow-lg focus:outline-none w-full md:w-auto">Delete Service</button>
+                      ) : (
+                        <div></div>
+                      )}
                     </div>
                   ) : (
-                    <div class="md:flex md:justify-end">
-                      <button class="bg-red-500 rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Revoke Authorization</button>
-                      <button class="bg-gray-300 rounded-lg px-4 py-2 md:mx-2 my-2 text-gray-500 hover:shadow-lg focus:outline-none w-full md:w-auto">Remove Service</button>
-                    </div>
-                  )
-                ) : (
-                  <div class="flex justify-end">
-                    <button class="bg-secondary rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Add Service</button>
+                    <div></div>
+                  )}
+                  <div class="md:flex md:justify-end">
+                    <button
+                      class={`${
+                        service.authorized ? 'bg-red-500' : 'bg-secondary'
+                      } rounded-lg px-4 py-2 md:mx-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto`}
+                      onClick={() => this.toggleAuth(service.id)}
+                    >
+                      {service.authorized ? 'Revoke Authorization' : 'Grant Authorization'}
+                    </button>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </div>
@@ -205,8 +216,8 @@ export class WcElixirUtilsServiceList {
     if (this.filter === 'All') {
       this.filter = 'Owned';
     } else if (this.filter === 'Owned') {
-      this.filter = 'Added';
-    } else if (this.filter === 'Added') {
+      this.filter = 'Managed';
+    } else if (this.filter === 'Managed') {
       this.filter = 'Other';
     } else {
       this.filter = 'All';
@@ -222,7 +233,7 @@ export class WcElixirUtilsServiceList {
           value={this.searchService}
           onInput={e => this.handleSearchQuery(e)}
         ></input>
-        <button class="py-2 px-5 bg-primary text-sm text-white rounded-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
+        <button class="py-2 px-5 bg-primary text-xs text-white rounded-lg focus:outline-none w-24" onClick={() => this.handleFilterClick()}>
           {this.filter}
         </button>
       </div>

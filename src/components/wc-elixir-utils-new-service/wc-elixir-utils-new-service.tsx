@@ -6,13 +6,7 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class WcElixirUtilsNewService {
-
   render() {
-    return (
-      <Host>
-        <slot></slot>
-      </Host>
-    );
+    return <Host>Hello</Host>;
   }
-
 }
