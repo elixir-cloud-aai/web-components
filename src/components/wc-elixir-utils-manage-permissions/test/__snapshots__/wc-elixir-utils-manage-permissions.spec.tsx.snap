@@ -16,7 +16,7 @@ Object {
       <br>
       <div class="flex">
         <input class="border-2 flex-1 focus:outline-none focus:shadow mr-2 px-3 py-2 rounded-lg text-sm" placeholder="Search by user's name or email..." value="">
-        <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-sm text-white w-24">
+        <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-white text-xs w-24">
           All
         </button>
       </div>
@@ -37,7 +37,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="border-2 h-4 rounded-md w-4"></div>
+          <select class="outline-none text-sm" id="1">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option selected="" value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -57,7 +67,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="border-2 h-4 rounded-md w-4"></div>
+          <select class="outline-none text-sm" id="2">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option selected="" value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -77,11 +97,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="\`w-5 bg-primary border-2 border-primary h-4 rounded-md">
-            <svg class="h-3 text-white w-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-            </svg>
-          </div>
+          <select class="outline-none text-sm" id="3">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -101,7 +127,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="border-2 h-4 rounded-md w-4"></div>
+          <select class="outline-none text-sm" id="4">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option selected="" value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -121,11 +157,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="\`w-5 bg-primary border-2 border-primary h-4 rounded-md">
-            <svg class="h-3 text-white w-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-            </svg>
-          </div>
+          <select class="outline-none text-sm" id="5">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <br>
@@ -267,7 +309,7 @@ Object {
       <br>
       <div class="flex">
         <input class="border-2 flex-1 focus:outline-none focus:shadow mr-2 px-3 py-2 rounded-lg text-sm" placeholder="Search by user's name or email..." value="">
-        <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-sm text-white w-24">
+        <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-white text-xs w-24">
           All
         </button>
       </div>
@@ -288,7 +330,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="border-2 h-4 rounded-md w-4"></div>
+          <select class="outline-none text-sm" id="1">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option selected="" value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -308,7 +360,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="border-2 h-4 rounded-md w-4"></div>
+          <select class="outline-none text-sm" id="2">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option selected="" value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -328,11 +390,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="\`w-5 bg-primary border-2 border-primary h-4 rounded-md">
-            <svg class="h-3 text-white w-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-            </svg>
-          </div>
+          <select class="outline-none text-sm" id="3">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -352,7 +420,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="border-2 h-4 rounded-md w-4"></div>
+          <select class="outline-none text-sm" id="4">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option selected="" value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -372,11 +450,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="\`w-5 bg-primary border-2 border-primary h-4 rounded-md">
-            <svg class="h-3 text-white w-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-            </svg>
-          </div>
+          <select class="outline-none text-sm" id="5">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -396,11 +480,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="\`w-5 bg-primary border-2 border-primary h-4 rounded-md">
-            <svg class="h-3 text-white w-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-            </svg>
-          </div>
+          <select class="outline-none text-sm" id="6">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option selected="" value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -420,7 +510,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="border-2 h-4 rounded-md w-4"></div>
+          <select class="outline-none text-sm" id="7">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -440,11 +540,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="\`w-5 bg-primary border-2 border-primary h-4 rounded-md">
-            <svg class="h-3 text-white w-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-            </svg>
-          </div>
+          <select class="outline-none text-sm" id="8">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -464,7 +570,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="border-2 h-4 rounded-md w-4"></div>
+          <select class="outline-none text-sm" id="9">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option selected="" value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <div>
@@ -484,11 +600,17 @@ Object {
               </div>
             </div>
           </div>
-          <div class="\`w-5 bg-primary border-2 border-primary h-4 rounded-md">
-            <svg class="h-3 text-white w-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-            </svg>
-          </div>
+          <select class="outline-none text-sm" id="10">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
         </div>
       </div>
       <br>
