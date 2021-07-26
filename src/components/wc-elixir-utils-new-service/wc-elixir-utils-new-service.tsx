@@ -23,8 +23,21 @@ export class WcElixirUtilsNewService {
     }
   };
 
-  render() {
-    console.log(this.data);
+  toTitleCase = str => {
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1);
+    });
+  };
+
+  isRequired = field => {
+    let index = this.fields.required.findIndex(req => field === req);
+    if (index == -1) {
+      return false;
+    }
+    return true;
+  };
+
+  renderFields = () => {
     if (this.data == 'loading') {
       return (
         <div class="text-center">
@@ -42,12 +55,37 @@ export class WcElixirUtilsNewService {
         </div>
       );
     }
+    return Object.keys(this.fields.properties).map(property => {
+      return (
+        <div class="flex my-2 justify-between align-bottom">
+          <div class="text-lg">
+            {this.toTitleCase(property)}
+            {this.isRequired(property) ? '*' : ''} :
+          </div>
+          <div>
+            <input required={this.isRequired(property)} class="flex-1 text-sm border-2 mr-2 py-2 px-3 focus:outline-none rounded-lg focus:shadow"></input>
+          </div>
+        </div>
+      );
+    });
+  };
+
+  render() {
+    console.log(this.fields);
     return (
       <Host>
         <div class="text-center">
           <div class="text-lg font-semibold">Create new Service</div>
         </div>
         <br></br>
+        <form>
+          {this.renderFields()}
+          <div class="text-center">
+            <button type="submit" class="bg-secondary rounded-lg px-4 py-2 md:mr-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-48">
+              Submit
+            </button>
+          </div>
+        </form>
       </Host>
     );
   }
