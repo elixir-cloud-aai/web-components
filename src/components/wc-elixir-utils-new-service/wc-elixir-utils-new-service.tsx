@@ -58,12 +58,12 @@ export class WcElixirUtilsNewService {
     return Object.keys(this.fields.properties).map(property => {
       return (
         <div class="flex my-2 justify-between align-bottom">
-          <div class="text-lg">
+          <div class="text-lg flex-1">
             {this.toTitleCase(property)}
             {this.isRequired(property) ? '*' : ''} :
           </div>
-          <div>
-            <input required={this.isRequired(property)} class="flex-1 text-sm border-2 mr-2 py-2 px-3 focus:outline-none rounded-lg focus:shadow"></input>
+          <div class="flex-1">
+            <input required={this.isRequired(property)} class="w-full text-sm border-2 mr-2 py-2 px-3 focus:outline-none rounded-lg focus:shadow"></input>
           </div>
         </div>
       );
