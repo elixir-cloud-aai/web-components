@@ -68,7 +68,7 @@ export class WcElixirUtilsNewService {
                 <div class="flex-1">
                   <input
                     required={this.isRequired(property, this.fields)}
-                    placeholder={this.fields.properties[property].description}
+                    // placeholder={this.fields.properties[property].description}
                     class={`w-full text-sm border-2 py-1.5 px-3 focus:outline-none rounded-lg focus:shadow ${this.fields.properties[property].properties ? 'invisible' : ''}`}
                   ></input>
                 </div>
@@ -77,10 +77,7 @@ export class WcElixirUtilsNewService {
                 Object.keys(this.fields.properties[property].properties).map(subproperty => {
                   return (
                     <div class="flex justify-between items-center my-2">
-                      <div class="text flex-1">
-                        {this.toTitleCase(subproperty)}
-                        {this.isRequired(subproperty, this.fields.properties[property]) ? '*' : ''} :
-                      </div>
+                      <div class="text flex-1">{this.toTitleCase(subproperty)}:</div>
                       <div class="flex-1">
                         <input
                           required={this.isRequired(property, this.fields.properties[property])}
