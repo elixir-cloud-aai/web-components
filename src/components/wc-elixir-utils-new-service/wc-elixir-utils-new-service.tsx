@@ -81,7 +81,7 @@ export class WcElixirUtilsNewService {
                       <div class="flex-1">
                         <input
                           required={this.isRequired(property, this.fields.properties[property])}
-                          class="w-full text-sm border-2 py-1 px-3 focus:outline-none rounded-lg focus:shadow"
+                          class="w-full text-sm border-2 py-1.5 px-3 focus:outline-none rounded-lg focus:shadow"
                         ></input>
                       </div>
                     </div>
