@@ -11,6 +11,14 @@ export class AppNewService {
       name: 'authToken',
       type: 'string',
     },
+    {
+      name: 'apiUrl',
+      type: 'string',
+    },
+    {
+      name: 'schema',
+      type: 'string',
+    },
   ];
 
   renderProps = () => {
@@ -40,7 +48,9 @@ export class AppNewService {
           </div>
           <div class="text-3xl my-5">Usage</div>
           <div class="text-2xl mt-5">Principle</div>
-          <div class="my-3 leading-7">This component will allow the users to add the services to their dashboard.</div>
+          <div class="my-3 leading-7">
+            This component will allow the users to create new service for the other users to see or use. This component will require the prop of the opiApi specs to work.
+          </div>
           <div class="text-2xl mt-5">Implementation</div>
           <div class="my-3 leading-7">
             This component can we used by:

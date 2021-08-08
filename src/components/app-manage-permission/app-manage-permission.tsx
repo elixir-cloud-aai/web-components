@@ -46,10 +46,18 @@ export class AppManagePermission {
           </div>
           <div class="text-3xl my-5">Usage</div>
           <div class="text-2xl mt-5">Principle</div>
-          <div class="my-3 leading-7">Manage Permission component is used by the owner of the service & admin to manage the permission regarding the services.</div>
+          <div class="my-3 leading-7">
+            Manage Permission component is used by the owner of the service & admin to manage the permission regarding the services. Any service can have the three levels of
+            permissions:-
+            <ul class="list-disc">
+              <li>Manager:- Will be able to manage permission for the service.</li>
+              <li>Permitted:- Will be able to see the service or use it.</li>
+              <li>Not-Permitted- Will not be able to see the service.</li>
+            </ul>
+          </div>
           <div class="text-2xl mt-5">Implementation</div>
           <div class="my-3 leading-7">
-            This component can we used by:
+            This component can be used by:
             <button class="bg-gray-100 py-1 font-mono px-2 ml-2 cursor-text focus:outline-none">&lt;wc-elixir-utils-manage-permissions&gt;</button>
           </div>
           <div>
