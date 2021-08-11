@@ -18,9 +18,11 @@ export namespace Components {
     }
     interface AppNewService {
     }
+    interface AppServiceComponent {
+    }
     interface AppServiceList {
     }
-    interface WcElixirGa4ghService {
+    interface WcElixirService {
     }
     interface WcElixirUtilsManagePermissions {
         "authToken": string;
@@ -73,17 +75,23 @@ declare global {
         prototype: HTMLAppNewServiceElement;
         new (): HTMLAppNewServiceElement;
     };
+    interface HTMLAppServiceComponentElement extends Components.AppServiceComponent, HTMLStencilElement {
+    }
+    var HTMLAppServiceComponentElement: {
+        prototype: HTMLAppServiceComponentElement;
+        new (): HTMLAppServiceComponentElement;
+    };
     interface HTMLAppServiceListElement extends Components.AppServiceList, HTMLStencilElement {
     }
     var HTMLAppServiceListElement: {
         prototype: HTMLAppServiceListElement;
         new (): HTMLAppServiceListElement;
     };
-    interface HTMLWcElixirGa4ghServiceElement extends Components.WcElixirGa4ghService, HTMLStencilElement {
+    interface HTMLWcElixirServiceElement extends Components.WcElixirService, HTMLStencilElement {
     }
-    var HTMLWcElixirGa4ghServiceElement: {
-        prototype: HTMLWcElixirGa4ghServiceElement;
-        new (): HTMLWcElixirGa4ghServiceElement;
+    var HTMLWcElixirServiceElement: {
+        prototype: HTMLWcElixirServiceElement;
+        new (): HTMLWcElixirServiceElement;
     };
     interface HTMLWcElixirUtilsManagePermissionsElement extends Components.WcElixirUtilsManagePermissions, HTMLStencilElement {
     }
@@ -110,8 +118,9 @@ declare global {
         "app-load": HTMLAppLoadElement;
         "app-manage-permission": HTMLAppManagePermissionElement;
         "app-new-service": HTMLAppNewServiceElement;
+        "app-service-component": HTMLAppServiceComponentElement;
         "app-service-list": HTMLAppServiceListElement;
-        "wc-elixir-ga4gh-service": HTMLWcElixirGa4ghServiceElement;
+        "wc-elixir-service": HTMLWcElixirServiceElement;
         "wc-elixir-utils-manage-permissions": HTMLWcElixirUtilsManagePermissionsElement;
         "wc-elixir-utils-new-service": HTMLWcElixirUtilsNewServiceElement;
         "wc-elixir-utils-service-list": HTMLWcElixirUtilsServiceListElement;
@@ -130,9 +139,11 @@ declare namespace LocalJSX {
     }
     interface AppNewService {
     }
+    interface AppServiceComponent {
+    }
     interface AppServiceList {
     }
-    interface WcElixirGa4ghService {
+    interface WcElixirService {
     }
     interface WcElixirUtilsManagePermissions {
         "authToken"?: string;
@@ -154,8 +165,9 @@ declare namespace LocalJSX {
         "app-load": AppLoad;
         "app-manage-permission": AppManagePermission;
         "app-new-service": AppNewService;
+        "app-service-component": AppServiceComponent;
         "app-service-list": AppServiceList;
-        "wc-elixir-ga4gh-service": WcElixirGa4ghService;
+        "wc-elixir-service": WcElixirService;
         "wc-elixir-utils-manage-permissions": WcElixirUtilsManagePermissions;
         "wc-elixir-utils-new-service": WcElixirUtilsNewService;
         "wc-elixir-utils-service-list": WcElixirUtilsServiceList;
@@ -171,8 +183,9 @@ declare module "@stencil/core" {
             "app-load": LocalJSX.AppLoad & JSXBase.HTMLAttributes<HTMLAppLoadElement>;
             "app-manage-permission": LocalJSX.AppManagePermission & JSXBase.HTMLAttributes<HTMLAppManagePermissionElement>;
             "app-new-service": LocalJSX.AppNewService & JSXBase.HTMLAttributes<HTMLAppNewServiceElement>;
+            "app-service-component": LocalJSX.AppServiceComponent & JSXBase.HTMLAttributes<HTMLAppServiceComponentElement>;
             "app-service-list": LocalJSX.AppServiceList & JSXBase.HTMLAttributes<HTMLAppServiceListElement>;
-            "wc-elixir-ga4gh-service": LocalJSX.WcElixirGa4ghService & JSXBase.HTMLAttributes<HTMLWcElixirGa4ghServiceElement>;
+            "wc-elixir-service": LocalJSX.WcElixirService & JSXBase.HTMLAttributes<HTMLWcElixirServiceElement>;
             "wc-elixir-utils-manage-permissions": LocalJSX.WcElixirUtilsManagePermissions & JSXBase.HTMLAttributes<HTMLWcElixirUtilsManagePermissionsElement>;
             "wc-elixir-utils-new-service": LocalJSX.WcElixirUtilsNewService & JSXBase.HTMLAttributes<HTMLWcElixirUtilsNewServiceElement>;
             "wc-elixir-utils-service-list": LocalJSX.WcElixirUtilsServiceList & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceListElement>;

@@ -22,6 +22,10 @@ const indexes: indexType[] = [
     display: 'Components',
     subIndexes: [
       {
+        display: 'Service Component',
+        url: '/docs/components/service-component',
+      },
+      {
         display: 'Service List',
         url: '/docs/components/service-list',
       },
