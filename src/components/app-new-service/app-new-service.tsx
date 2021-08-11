@@ -56,7 +56,7 @@ export class AppNewService {
           <div class="text-2xl mt-5">Implementation</div>
           <div class="my-3 leading-7">
             This component can we used by:
-            <button class="bg-gray-100 py-1 font-mono px-2 ml-2 cursor-text focus:outline-none">&lt;wc-elixir-new-service&gt;</button>
+            <button class="bg-gray-100 py-1 font-mono px-2 ml-2 cursor-text focus:outline-none">&lt;wc-elixir-utils-new-service&gt;</button>
           </div>
           <div>
             <div class="my-10">

@@ -177,11 +177,6 @@ export class WcElixirUtilsManagePermissions {
     }
     return (
       <Host>
-        <div class="text-center">
-          <div class="text-lg font-semibold">Manage Permissions</div>
-          <div class="text-gray-700">{this.service.name}</div>
-        </div>
-        <br></br>
         {this.renderSearchBar()}
         {this.renderUsers()}
         <br></br>

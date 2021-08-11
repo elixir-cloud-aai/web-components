@@ -106,10 +106,6 @@ export class WcElixirUtilsNewService {
     console.log(this.fields);
     return (
       <Host>
-        <div class="text-center">
-          <div class="text-lg font-semibold">Create new Service</div>
-        </div>
-        <br></br>
         <form>{this.renderFields()}</form>
       </Host>
     );
