@@ -14,10 +14,12 @@ export class AppNewService {
     {
       name: 'apiUrl',
       type: 'string',
+      default: 'https://trs-filer-test.rahtiapp.fi/ga4gh/trs/v2/openapi.json',
     },
     {
       name: 'schema',
       type: 'string',
+      default: 'ServiceRegister',
     },
   ];
 
