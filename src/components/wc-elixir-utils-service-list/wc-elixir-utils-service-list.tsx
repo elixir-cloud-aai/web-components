@@ -14,6 +14,7 @@ export class WcElixirUtilsServiceList {
   @State() searchService: string = '';
   @State() services: any[];
   @State() filter: string = 'All';
+  @Prop() handleShowManagePermission: any;
 
   componentWillLoad = () => {
     if (this.authToken == 'component-demo') {
@@ -33,7 +34,6 @@ export class WcElixirUtilsServiceList {
   };
 
   toggleAuth = id => {
-    console.log(id);
     let services = this.services;
     let serviceIndex = services.findIndex(service => service.id == id);
     console.log(serviceIndex);
@@ -128,7 +128,12 @@ export class WcElixirUtilsServiceList {
                   {service.type ? (
                     <div>
                       <button class="bg-primary rounded-lg px-4 py-2 md:mr-4 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Edit Service</button>
-                      <button class="bg-secondary rounded-lg px-4 py-2 md:mr-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto">Manage Permission</button>
+                      <button
+                        class="bg-secondary rounded-lg px-4 py-2 md:mr-2 my-2 text-white hover:shadow-lg focus:outline-none w-full md:w-auto"
+                        onClick={() => this.handleShowManagePermission(service.id, service.name)}
+                      >
+                        Manage Permission
+                      </button>
                       {service.type == 'Owned' ? (
                         <button class="bg-gray-300 rounded-lg px-4 py-2 md:mx-2 my-2 text-gray-500 hover:shadow-lg focus:outline-none w-full md:w-auto">Delete Service</button>
                       ) : (

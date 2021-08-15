@@ -5,15 +5,6 @@ Object {
   "body": <body>
   <div>
     <wc-elixir-utils-manage-permissions>
-      <div class="text-center">
-        <div class="font-semibold text-lg">
-          Manage Permissions
-        </div>
-        <div class="text-gray-700">
-          Service 1
-        </div>
-      </div>
-      <br>
       <div class="flex">
         <input class="border-2 flex-1 focus:outline-none focus:shadow mr-2 px-3 py-2 rounded-lg text-sm" placeholder="Search by user's name or email..." value="">
         <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-white text-xs w-24">
@@ -298,15 +289,6 @@ Object {
   "body": <body>
   <div>
     <wc-elixir-utils-manage-permissions>
-      <div class="text-center">
-        <div class="font-semibold text-lg">
-          Manage Permissions
-        </div>
-        <div class="text-gray-700">
-          Service 1
-        </div>
-      </div>
-      <br>
       <div class="flex">
         <input class="border-2 flex-1 focus:outline-none focus:shadow mr-2 px-3 py-2 rounded-lg text-sm" placeholder="Search by user's name or email..." value="">
         <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-white text-xs w-24">
