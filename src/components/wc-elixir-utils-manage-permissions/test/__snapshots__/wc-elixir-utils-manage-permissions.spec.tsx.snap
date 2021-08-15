@@ -1,0 +1,713 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`wc-elixir-utils-manage-permissions renders 1`] = `
+Object {
+  "body": <body>
+  <div>
+    <wc-elixir-utils-manage-permissions>
+      <div class="flex">
+        <input class="border-2 flex-1 focus:outline-none focus:shadow mr-2 px-3 py-2 rounded-lg text-sm" placeholder="Search by user's name or email..." value="">
+        <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-white text-xs w-24">
+          All
+        </button>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 1
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user1@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user1@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="1">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option selected="" value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 2
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user2@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user2@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="2">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option selected="" value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 3
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user3@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user3@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="3">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 4
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user4@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user4@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="4">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option selected="" value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 5
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user5@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user5@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="5">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="align-middle flex justify-center">
+        <button class="border-2 border-gray-100 focus:outline-none h-9 hover:shadow-lg invisible mr-3 p-1.5 rounded-full shadow w-9">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+          </svg>
+        </button>
+        <button class="bg-primary focus:outline-none h-9 hover:shadow-lg mx-1 p-1 rounded-lg shadow text-white w-9">
+          1
+        </button>
+        <button class="focus:outline-none h-9 hover:shadow-lg mx-1 p-1 rounded-lg shadow w-9">
+          2
+        </button>
+        <button class="focus:outline-none h-9 hover:shadow-lg mx-1 p-1 rounded-lg shadow w-9">
+          3
+        </button>
+        <button class="focus:outline-none h-9 hover:shadow-lg mx-1 p-1 rounded-lg shadow w-9">
+          4
+        </button>
+        <button class="focus:outline-none h-9 hover:shadow-lg mx-1 p-1 rounded-lg shadow w-9">
+          5
+        </button>
+        <button class="border-2 border-gray-100 focus:outline-none h-9 hover:shadow-lg ml-3 p-1.5 rounded-full shadow w-9">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </wc-elixir-utils-manage-permissions>
+  </div>
+</body>,
+  "build": Object {
+    "allRenderFn": true,
+    "appendChildSlotFix": false,
+    "asyncLoading": true,
+    "asyncQueue": true,
+    "attachStyles": false,
+    "cloneNodeFix": false,
+    "cmpDidLoad": true,
+    "cmpDidRender": true,
+    "cmpDidUnload": true,
+    "cmpDidUpdate": true,
+    "cmpShouldUpdate": true,
+    "cmpWillLoad": true,
+    "cmpWillRender": true,
+    "cmpWillUpdate": true,
+    "connectedCallback": true,
+    "constructableCSS": true,
+    "cssAnnotations": false,
+    "cssVarShim": true,
+    "devTools": false,
+    "disconnectedCallback": true,
+    "dynamicImportShim": false,
+    "element": true,
+    "event": true,
+    "hasRenderFn": true,
+    "hostListener": true,
+    "hostListenerTarget": true,
+    "hostListenerTargetBody": true,
+    "hostListenerTargetDocument": true,
+    "hostListenerTargetParent": true,
+    "hostListenerTargetWindow": true,
+    "hotModuleReplacement": false,
+    "hydrateClientSide": false,
+    "hydrateServerSide": false,
+    "hydratedAttribute": false,
+    "hydratedClass": true,
+    "initializeNextTick": true,
+    "isDebug": false,
+    "isDev": true,
+    "isTesting": true,
+    "lazyLoad": true,
+    "lifecycle": true,
+    "lifecycleDOMEvents": true,
+    "member": true,
+    "method": true,
+    "mode": true,
+    "observeAttribute": true,
+    "profile": true,
+    "prop": true,
+    "propBoolean": true,
+    "propMutable": true,
+    "propNumber": true,
+    "propString": true,
+    "reflect": true,
+    "safari10": false,
+    "scoped": true,
+    "scriptDataOpts": false,
+    "shadowDelegatesFocus": true,
+    "shadowDom": true,
+    "shadowDomShim": false,
+    "slot": true,
+    "slotChildNodesFix": false,
+    "slotRelocation": true,
+    "state": true,
+    "style": true,
+    "svg": true,
+    "taskQueue": true,
+    "transformTagName": true,
+    "updatable": true,
+    "vdomAttribute": true,
+    "vdomClass": true,
+    "vdomFunctional": true,
+    "vdomKey": true,
+    "vdomListener": true,
+    "vdomPropOrAttr": true,
+    "vdomRef": true,
+    "vdomRender": true,
+    "vdomStyle": true,
+    "vdomText": true,
+    "vdomXlink": true,
+    "watchCallback": true,
+  },
+  "doc": ,
+  "flushLoadModule": [Function],
+  "flushQueue": [Function],
+  "setContent": [Function],
+  "styles": Map {},
+  "waitForChanges": [Function],
+  "win": [MockWindow],
+}
+`;
+
+exports[`wc-elixir-utils-manage-permissions renders itemPerPage 1`] = `
+Object {
+  "body": <body>
+  <div>
+    <wc-elixir-utils-manage-permissions>
+      <div class="flex">
+        <input class="border-2 flex-1 focus:outline-none focus:shadow mr-2 px-3 py-2 rounded-lg text-sm" placeholder="Search by user's name or email..." value="">
+        <button class="bg-primary focus:outline-none px-5 py-2 rounded-lg text-white text-xs w-24">
+          All
+        </button>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 1
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user1@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user1@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="1">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option selected="" value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 2
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user2@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user2@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="2">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option selected="" value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 3
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user3@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user3@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="3">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 4
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user4@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user4@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="4">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option selected="" value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 5
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user5@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user5@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="5">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 6
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user6@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user6@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="6">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option selected="" value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 7
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user7@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user7@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="7">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 8
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user8@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user8@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="8">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 9
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user9@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user9@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="9">
+            <option value="">
+              Not-Permitted
+            </option>
+            <option selected="" value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="border-2 border-gray-100 flex hover:shadow-md items-center justify-between mt-2 px-3 py-2 rounded-lg">
+          <div>
+            <div>
+              <div class="font-semibold text-base title">
+                <span>
+                  User 10
+                </span>
+                <span class="font-extralight hidden italic lg:inline-block text-xs title">
+                  - user10@demo.com
+                </span>
+              </div>
+              <div class="font-extralight italic lg:hidden text-xs title">
+                user10@demo.com
+              </div>
+            </div>
+          </div>
+          <select class="outline-none text-sm" id="10">
+            <option selected="" value="">
+              Not-Permitted
+            </option>
+            <option value="Permitted">
+              Permitted
+            </option>
+            <option value="Manager">
+              Manager
+            </option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="align-middle flex justify-center">
+        <button class="border-2 border-gray-100 focus:outline-none h-9 hover:shadow-lg invisible mr-3 p-1.5 rounded-full shadow w-9">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+          </svg>
+        </button>
+        <button class="bg-primary focus:outline-none h-9 hover:shadow-lg mx-1 p-1 rounded-lg shadow text-white w-9">
+          1
+        </button>
+        <button class="focus:outline-none h-9 hover:shadow-lg mx-1 p-1 rounded-lg shadow w-9">
+          2
+        </button>
+        <button class="focus:outline-none h-9 hover:shadow-lg mx-1 p-1 rounded-lg shadow w-9">
+          3
+        </button>
+        <button class="border-2 border-gray-100 focus:outline-none h-9 hover:shadow-lg ml-3 p-1.5 rounded-full shadow w-9">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </wc-elixir-utils-manage-permissions>
+  </div>
+</body>,
+  "build": Object {
+    "allRenderFn": true,
+    "appendChildSlotFix": false,
+    "asyncLoading": true,
+    "asyncQueue": true,
+    "attachStyles": false,
+    "cloneNodeFix": false,
+    "cmpDidLoad": true,
+    "cmpDidRender": true,
+    "cmpDidUnload": true,
+    "cmpDidUpdate": true,
+    "cmpShouldUpdate": true,
+    "cmpWillLoad": true,
+    "cmpWillRender": true,
+    "cmpWillUpdate": true,
+    "connectedCallback": true,
+    "constructableCSS": true,
+    "cssAnnotations": false,
+    "cssVarShim": true,
+    "devTools": false,
+    "disconnectedCallback": true,
+    "dynamicImportShim": false,
+    "element": true,
+    "event": true,
+    "hasRenderFn": true,
+    "hostListener": true,
+    "hostListenerTarget": true,
+    "hostListenerTargetBody": true,
+    "hostListenerTargetDocument": true,
+    "hostListenerTargetParent": true,
+    "hostListenerTargetWindow": true,
+    "hotModuleReplacement": false,
+    "hydrateClientSide": false,
+    "hydrateServerSide": false,
+    "hydratedAttribute": false,
+    "hydratedClass": true,
+    "initializeNextTick": true,
+    "isDebug": false,
+    "isDev": true,
+    "isTesting": true,
+    "lazyLoad": true,
+    "lifecycle": true,
+    "lifecycleDOMEvents": true,
+    "member": true,
+    "method": true,
+    "mode": true,
+    "observeAttribute": true,
+    "profile": true,
+    "prop": true,
+    "propBoolean": true,
+    "propMutable": true,
+    "propNumber": true,
+    "propString": true,
+    "reflect": true,
+    "safari10": false,
+    "scoped": true,
+    "scriptDataOpts": false,
+    "shadowDelegatesFocus": true,
+    "shadowDom": true,
+    "shadowDomShim": false,
+    "slot": true,
+    "slotChildNodesFix": false,
+    "slotRelocation": true,
+    "state": true,
+    "style": true,
+    "svg": true,
+    "taskQueue": true,
+    "transformTagName": true,
+    "updatable": true,
+    "vdomAttribute": true,
+    "vdomClass": true,
+    "vdomFunctional": true,
+    "vdomKey": true,
+    "vdomListener": true,
+    "vdomPropOrAttr": true,
+    "vdomRef": true,
+    "vdomRender": true,
+    "vdomStyle": true,
+    "vdomText": true,
+    "vdomXlink": true,
+    "watchCallback": true,
+  },
+  "doc": ,
+  "flushLoadModule": [Function],
+  "flushQueue": [Function],
+  "setContent": [Function],
+  "styles": Map {},
+  "waitForChanges": [Function],
+  "win": [MockWindow],
+}
+`;
