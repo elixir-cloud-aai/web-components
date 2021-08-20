@@ -16,7 +16,7 @@ export class AppHome {
           </div>
           <div class="mx-10 md:ml-40 mt-28 mb-40 md:mb-56 md:mr-40 lg:mr-108 md:mt-40 static">
             <div class="text-4xl font-bold md:text-5xl text-gray-700">
-              Build service dashboards rapidly with <span class="text-primary font-extrabold">Elixir Cloud Components</span>.
+              uild service dashboards rapidly with <span class="text-primary font-extrabold">Elixir Cloud Components</span>.
             </div>
             <br></br>
             <div class="text-xl text-gray-400">
