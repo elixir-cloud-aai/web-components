@@ -1,0 +1,17 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Elixir Cloud Components</title> <link rel="icon" href="https://raw.githubusercontent.com/elixir-cloud-aai/logo/dev/logo.svg" type="image/icon type"> <link rel="stylesheet" href="/build/p-c79b4b72.css"> <link rel="modulepreload" href="/build/p-0ec8b000.js"><script type="module" src="/build/p-0ec8b000.js" data-stencil data-resources-url="/build/" data-stencil-namespace="web-components"></script> <script nomodule="" src="/build/web-components.js" data-stencil></script> </head> <body> <app-load></app-load> <script data-build="2021-09-23T11:35:28">
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', function() {
+  navigator.serviceWorker.register('/sw.js')
+    .then(function(reg) {
+    reg.onupdatefound = function() {
+      var installingWorker = reg.installing;
+      installingWorker.onstatechange = function() {
+      if (installingWorker.state === 'installed') {
+        window.dispatchEvent(new Event('swUpdate'))
+      }
+      }
+    }
+    })
+    .catch(function(err) { console.error('service worker error', err) });
+  });
+}</script></body></html>
