@@ -1,21 +1,21 @@
-import { Component, Host, h } from '@stencil/core';
-import Router from '../../router';
+import { Component, Host, h } from "@stencil/core";
+import Router from "../../router";
 
 @Component({
-  tag: 'app-docs',
-  styleUrl: 'app-docs.css',
+  tag: "app-docs",
+  styleUrl: "app-docs.css",
   scoped: true,
 })
 export class AppDocs {
   renderContent = () => {
     switch (Router.url.pathname) {
-      case '/docs/components/service-component':
+      case "/docs/components/service-component":
         return <app-service-component></app-service-component>;
-      case '/docs/components/service-list':
+      case "/docs/components/service-list":
         return <app-service-list></app-service-list>;
-      case '/docs/components/manage-permission':
+      case "/docs/components/manage-permission":
         return <app-manage-permission></app-manage-permission>;
-      case '/docs/components/add-new-service':
+      case "/docs/components/add-new-service":
         return <app-new-service></app-new-service>;
       default:
         break;

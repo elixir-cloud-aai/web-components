@@ -1,20 +1,20 @@
-import { Component, Host, h, State } from '@stencil/core';
-import { indexType } from '../../types';
-import indexes from '../../indexes';
-import Router from '../../router';
+import { Component, Host, h, State } from "@stencil/core";
+import { indexType } from "../../types";
+import indexes from "../../indexes";
+import Router from "../../router";
 
 @Component({
-  tag: 'app-indexes',
-  styleUrl: 'app-indexes.css',
+  tag: "app-indexes",
+  styleUrl: "app-indexes.css",
   scoped: true,
 })
 export class AppIndexes {
   @State() navOpen: Boolean = false;
-  @State() search: string = '';
+  @State() search: string = "";
 
   toggleIndex = (index: number) => {
     const subIndexes = document.querySelector(`.index-${index}`);
-    subIndexes.classList.toggle('hidden');
+    subIndexes.classList.toggle("hidden");
   };
 
   renderIndex = () => {
@@ -31,11 +31,11 @@ export class AppIndexes {
               </button>
               <div class={`index-${i} ml-10`}>
                 {index.subIndexes
-                  ? index.subIndexes.map(subIndex => {
+                  ? index.subIndexes.map((subIndex) => {
                       return (
                         <button
                           class={`block text-base py-1 transition duration-200 focus:outline-none focus:shadow-outline hover:text-primary ${
-                            Router.activePath == subIndex.url ? 'text-primary' : ''
+                            Router.activePath == subIndex.url ? "text-primary" : ""
                           }`}
                           onClick={() => Router.push(subIndex.url)}
                         >
@@ -43,7 +43,7 @@ export class AppIndexes {
                         </button>
                       );
                     })
-                  : ''}
+                  : ""}
               </div>
             </div>
           );
@@ -53,12 +53,12 @@ export class AppIndexes {
   };
 
   handleToggleNav = () => {
-    const nav = document.querySelector('.wc-sidebar');
-    nav.classList.toggle('-translate-x-full');
+    const nav = document.querySelector(".wc-sidebar");
+    nav.classList.toggle("-translate-x-full");
     this.navOpen = !this.navOpen;
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.search = (e.target as HTMLInputElement).value;
   };
 
@@ -74,7 +74,10 @@ export class AppIndexes {
         }
       }
       if (subIndexArr.length > 0) {
-        indexesSearched = [...indexesSearched, { display: indexedElement.display, subIndexes: subIndexArr }];
+        indexesSearched = [
+          ...indexesSearched,
+          { display: indexedElement.display, subIndexes: subIndexArr },
+        ];
       }
     }
     if (indexesSearched.length === 0) {
@@ -85,23 +88,25 @@ export class AppIndexes {
         {indexesSearched.map((index: indexType) => {
           return (
             <div class="text-sm text-gray-700">
-              <button class="block pt-2.5 pb-1 text-sm font-semibold mx-4 transition duration-200 focus:outline-none focus:shadow-outline">{index.display}</button>
+              <button class="block pt-2.5 pb-1 text-sm font-semibold mx-4 transition duration-200 focus:outline-none focus:shadow-outline">
+                {index.display}
+              </button>
               <div class={`ml-10`}>
                 {index.subIndexes
-                  ? index.subIndexes.map(subIndex => {
+                  ? index.subIndexes.map((subIndex) => {
                       return (
                         <button
                           class={`block text-sm py-1 transition duration-200 focus:outline-none focus:shadow-outline`}
                           onClick={() => {
                             Router.push(subIndex.url);
-                            this.search = '';
+                            this.search = "";
                           }}
                         >
                           {subIndex.display}
                         </button>
                       );
                     })
-                  : ''}
+                  : ""}
               </div>
             </div>
           );
@@ -120,30 +125,55 @@ export class AppIndexes {
               this.handleToggleNav();
             }}
           >
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
 
         <div
           class={`wc-sidebar w-64 space-y-6 m-0 md:m-10 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out ${
-            this.navOpen ? 'bg-black text-blue-100 w-max p-5' : ''
+            this.navOpen ? "bg-black text-blue-100 w-max p-5" : ""
           }`}
         >
           <nav class="relative">
             {this.navOpen ? (
               <div>
-                <button class="absolute top-0 right-0 focus:outline-none focus:shadow-outline" onClick={() => this.handleToggleNav()}>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                <button
+                  class="absolute top-0 right-0 focus:outline-none focus:shadow-outline"
+                  onClick={() => this.handleToggleNav()}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
                 <br></br>
                 <br></br>
               </div>
             ) : (
-              ''
+              ""
             )}
             <div class="relative">
               <input
@@ -152,9 +182,15 @@ export class AppIndexes {
                 autocomplete="off"
                 placeholder="Search Documentation"
                 value={this.search}
-                onInput={e => this.handleChange(e)}
+                onInput={(e) => this.handleChange(e)}
               />
-              <div class={`absolute w-full text-sm bg-white border-2 border-gray-100 shadow-md p-3 mt-3 rounded ${this.search == '' ? 'hidden' : ''}`}>{this.renderSearch()}</div>
+              <div
+                class={`absolute w-full text-sm bg-white border-2 border-gray-100 shadow-md p-3 mt-3 rounded ${
+                  this.search == "" ? "hidden" : ""
+                }`}
+              >
+                {this.renderSearch()}
+              </div>
             </div>
             {this.renderIndex()}
           </nav>
