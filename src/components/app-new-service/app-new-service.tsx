@@ -1,30 +1,30 @@
-import { Component, Host, h, State } from '@stencil/core';
-import { componentProps } from '../../types';
+import { Component, Host, h, State } from "@stencil/core";
+import { componentProps } from "../../types";
 @Component({
-  tag: 'app-new-service',
-  styleUrl: 'app-new-service.css',
+  tag: "app-new-service",
+  styleUrl: "app-new-service.css",
   scoped: true,
 })
 export class AppNewService {
   @State() componentProps: componentProps[] = [
     {
-      name: 'authToken',
-      type: 'string',
+      name: "authToken",
+      type: "string",
     },
     {
-      name: 'apiUrl',
-      type: 'string',
-      default: 'https://trs-filer-test.rahtiapp.fi/ga4gh/trs/v2/openapi.json',
+      name: "apiUrl",
+      type: "string",
+      default: "https://trs-filer-test.rahtiapp.fi/ga4gh/trs/v2/openapi.json",
     },
     {
-      name: 'schema',
-      type: 'string',
-      default: 'ServiceRegister',
+      name: "schema",
+      type: "string",
+      default: "ServiceRegister",
     },
   ];
 
   renderProps = () => {
-    return this.componentProps.map(prop => {
+    return this.componentProps.map((prop) => {
       return (
         <div class="w-full border-gray-200 border-b-2 grid grid-cols-3 gap-10 my-2.5">
           <div>{prop.name}</div>
@@ -43,20 +43,28 @@ export class AppNewService {
         <div class="text-3xl font-semibold mb-5">Add new service</div>
         <div class=" my-10">
           <div class="border-gray-100 rounded-lg p-3 border-2 my-10">
-            <div class="text-sm font-semibold w-full border-b-2 border-gray-100 pb-2">Component Demo</div>
+            <div class="text-sm font-semibold w-full border-b-2 border-gray-100 pb-2">
+              Component Demo
+            </div>
             <div class="mt-4">
-              <wc-elixir-utils-new-service apiUrl="https://trs-filer-test.rahtiapp.fi/ga4gh/trs/v2/openapi.json" schema="ServiceRegister"></wc-elixir-utils-new-service>
+              <wc-elixir-utils-new-service
+                apiUrl="https://trs-filer-test.rahtiapp.fi/ga4gh/trs/v2/openapi.json"
+                schema="ServiceRegister"
+              ></wc-elixir-utils-new-service>
             </div>
           </div>
           <div class="text-3xl my-5">Usage</div>
           <div class="text-2xl mt-5">Principle</div>
           <div class="my-3 leading-7">
-            This component will allow the users to create new service for the other users to see or use. This component will require the prop of the opiApi specs to work.
+            This component will allow the users to create new service for the other users to see or
+            use. This component will require the prop of the opiApi specs to work.
           </div>
           <div class="text-2xl mt-5">Implementation</div>
           <div class="my-3 leading-7">
             This component can we used by:
-            <button class="bg-gray-100 py-1 font-mono px-2 ml-2 cursor-text focus:outline-none">&lt;wc-elixir-utils-new-service&gt;</button>
+            <button class="bg-gray-100 py-1 font-mono px-2 ml-2 cursor-text focus:outline-none">
+              &lt;wc-elixir-utils-new-service&gt;
+            </button>
           </div>
           <div>
             <div class="my-10">

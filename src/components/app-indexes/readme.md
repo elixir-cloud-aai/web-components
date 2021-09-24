@@ -1,4 +1,4 @@
-# wc-home
+# app-indexes
 
 
 
@@ -9,13 +9,13 @@
 
 ### Used by
 
- - [app-load](../app-load)
+ - [app-docs](../app-docs)
 
 ### Graph
 ```mermaid
 graph TD;
-  app-load --> app-home
-  style app-home fill:#f9f,stroke:#333,stroke-width:4px
+  app-docs --> app-indexes
+  style app-indexes fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
