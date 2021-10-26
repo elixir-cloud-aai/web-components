@@ -10,6 +10,7 @@ export class WcElixirUtilsNewService {
   @Prop() apiUrl: string;
   @Prop() schema: string;
   @Prop() authToken: string;
+  @Prop() description: "icon"|"text"|"none" = "icon";
   @State() fields: any;
   @State() data: string = "loading";
 
@@ -73,8 +74,18 @@ export class WcElixirUtilsNewService {
             <div class="py-2 border-b ">
               <div class="flex justify-between items-center">
                 <div class="text flex-1">
+                  <div class ="flex items-center flex-start">
                   {this.toTitleCase(property)}
-                  {this.isRequired(property, this.fields) ? "*" : ""} :
+                  {this.isRequired(property, this.fields) ? "*" : ""}:
+                  {this.description==="icon" ?
+                  <div class="tooltip"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" style={{display:"inline"}}>
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="tooltiptext">{this.fields.properties[property].description}</span>
+                  </div>
+                  :<div></div>}
+                  </div>
                 </div>
                 <div class="flex-1">
                   <input
@@ -86,18 +97,36 @@ export class WcElixirUtilsNewService {
                   ></input>
                 </div>
               </div>
+              {this.description === "text" ?
+                <div class="text-xs text-gray-400 italic">{this.fields.properties[property].description}</div>
+                :<div></div>}
               {this.fields.properties[property].properties ? (
                 Object.keys(this.fields.properties[property].properties).map((subproperty) => {
                   return (
-                    <div class="flex justify-between items-center my-2">
-                      <div class="text flex-1">{this.toTitleCase(subproperty)}:</div>
+                      <div>
+                      <div class="flex justify-between items-center my-2">
+                      <div class="text flex-1">
+                        {this.toTitleCase(subproperty)}:
+                        {this.description==="icon" ?
+                  <div class="tooltip"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" style={{display:"inline"}}>
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="tooltiptext">{this.fields.properties[property].description}</span>
+                  </div>
+                  :<div></div>}
+                        </div>
                       <div class="flex-1">
                         <input
                           required={this.isRequired(property, this.fields.properties[property])}
                           class="w-full text-sm border-2 py-1.5 px-3 focus:outline-none rounded-lg focus:shadow"
                         ></input>
                       </div>
-                    </div>
+                        </div>
+                        {this.description === "text" ?
+                <div class="text-xs text-gray-400 italic">{this.fields.properties[property].description}</div>
+                :<div></div>}
+                      </div>
                   );
                 })
               ) : (
