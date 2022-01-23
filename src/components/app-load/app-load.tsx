@@ -60,7 +60,7 @@ export class AppLoad {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-8 h-8 md:w-10 md:h-10 p-1 mx-10 icon icon-tabler icon-tabler-brand-github hover:border-primary border-b-2 rounded-full  border-white transition ease-out duration-500"
+                      class="w-8 h-8 md:w-10 md:h-10 p-1 mx-10 icon icon-tabler icon-tabler-brand-github hover:border-primary border-2 rounded-full  border-white transition ease-out duration-500"
                       width="44"
                       height="44"
                       viewBox="0 0 24 24"
