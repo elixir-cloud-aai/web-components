@@ -9,6 +9,12 @@ import Router from "../../router";
 export class AppDocs {
   renderContent = () => {
     switch (Router.url.pathname) {
+      case "/docs/intro/getting-started":
+        return <app-getting-started></app-getting-started>;
+      case "/docs/intro/community":
+        return <app-community></app-community>;
+      case "/docs/intro/contribute":
+        return <app-contribute></app-contribute>;
       case "/docs/components/service-component":
         return <app-service-component></app-service-component>;
       case "/docs/components/service-list":

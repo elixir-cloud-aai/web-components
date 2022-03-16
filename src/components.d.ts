@@ -6,7 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppCommunity {
+    }
+    interface AppContribute {
+    }
     interface AppDocs {
+    }
+    interface AppGettingStarted {
     }
     interface AppHome {
     }
@@ -40,11 +46,29 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppCommunityElement extends Components.AppCommunity, HTMLStencilElement {
+    }
+    var HTMLAppCommunityElement: {
+        prototype: HTMLAppCommunityElement;
+        new (): HTMLAppCommunityElement;
+    };
+    interface HTMLAppContributeElement extends Components.AppContribute, HTMLStencilElement {
+    }
+    var HTMLAppContributeElement: {
+        prototype: HTMLAppContributeElement;
+        new (): HTMLAppContributeElement;
+    };
     interface HTMLAppDocsElement extends Components.AppDocs, HTMLStencilElement {
     }
     var HTMLAppDocsElement: {
         prototype: HTMLAppDocsElement;
         new (): HTMLAppDocsElement;
+    };
+    interface HTMLAppGettingStartedElement extends Components.AppGettingStarted, HTMLStencilElement {
+    }
+    var HTMLAppGettingStartedElement: {
+        prototype: HTMLAppGettingStartedElement;
+        new (): HTMLAppGettingStartedElement;
     };
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
     }
@@ -113,7 +137,10 @@ declare global {
         new (): HTMLWcElixirUtilsServiceListElement;
     };
     interface HTMLElementTagNameMap {
+        "app-community": HTMLAppCommunityElement;
+        "app-contribute": HTMLAppContributeElement;
         "app-docs": HTMLAppDocsElement;
+        "app-getting-started": HTMLAppGettingStartedElement;
         "app-home": HTMLAppHomeElement;
         "app-indexes": HTMLAppIndexesElement;
         "app-load": HTMLAppLoadElement;
@@ -128,7 +155,13 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface AppCommunity {
+    }
+    interface AppContribute {
+    }
     interface AppDocs {
+    }
+    interface AppGettingStarted {
     }
     interface AppHome {
     }
@@ -161,7 +194,10 @@ declare namespace LocalJSX {
         "itemsPerPage"?: number;
     }
     interface IntrinsicElements {
+        "app-community": AppCommunity;
+        "app-contribute": AppContribute;
         "app-docs": AppDocs;
+        "app-getting-started": AppGettingStarted;
         "app-home": AppHome;
         "app-indexes": AppIndexes;
         "app-load": AppLoad;
@@ -179,7 +215,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-community": LocalJSX.AppCommunity & JSXBase.HTMLAttributes<HTMLAppCommunityElement>;
+            "app-contribute": LocalJSX.AppContribute & JSXBase.HTMLAttributes<HTMLAppContributeElement>;
             "app-docs": LocalJSX.AppDocs & JSXBase.HTMLAttributes<HTMLAppDocsElement>;
+            "app-getting-started": LocalJSX.AppGettingStarted & JSXBase.HTMLAttributes<HTMLAppGettingStartedElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-indexes": LocalJSX.AppIndexes & JSXBase.HTMLAttributes<HTMLAppIndexesElement>;
             "app-load": LocalJSX.AppLoad & JSXBase.HTMLAttributes<HTMLAppLoadElement>;
