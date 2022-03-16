@@ -31,6 +31,7 @@ export class WcElixirUtilsNewService {
           );
           this.data = "loaded";
         })
+        //@ts-ignore
         .catch((e) => {
           this.data = "error";
         });
