@@ -31,6 +31,7 @@ export namespace Components {
     interface WcElixirUtilsNewService {
         "apiUrl": string;
         "authToken": string;
+        "description": "icon"|"text"|"none";
         "schema": string;
     }
     interface WcElixirUtilsServiceList {
@@ -153,6 +154,7 @@ declare namespace LocalJSX {
     interface WcElixirUtilsNewService {
         "apiUrl"?: string;
         "authToken"?: string;
+        "description"?: "icon"|"text"|"none";
         "schema"?: string;
     }
     interface WcElixirUtilsServiceList {
