@@ -86,7 +86,7 @@ export class WcElixirUtilsNewService {
       );
     }
     return (
-      <div>
+      <form>
         {Object.keys(this.fields.properties).map((property) => {
           return (
             <div class="py-2 border-b ">
@@ -181,7 +181,7 @@ export class WcElixirUtilsNewService {
             Submit
           </button>
         </div>
-      </div>
+      </form>
     );
   };
 

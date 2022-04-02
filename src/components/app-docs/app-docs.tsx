@@ -23,6 +23,8 @@ export class AppDocs {
         return <app-manage-permission></app-manage-permission>;
       case "/docs/components/add-new-service":
         return <app-new-service></app-new-service>;
+      case "/docs/components/create-permission":
+        return <app-create-permission></app-create-permission>;
       default:
         break;
     }
@@ -33,7 +35,9 @@ export class AppDocs {
       <Host>
         <div class="relative min-h-screen md:flex">
           <app-indexes></app-indexes>
-          <div class="flex-1 m-5 md:m-10 overflow-y-visible">{this.renderContent()}</div>
+          <div class="flex-1 m-5 md:m-10 overflow-y-visible">
+            {this.renderContent()}
+          </div>
         </div>
       </Host>
     );

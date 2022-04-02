@@ -55,7 +55,7 @@ const renderBlock = (block) => {
           <a
             key={segment.content}
             href={segment.link}
-            class={`text-elixirblue hover:underline `}
+            class={`text-primary hover:underline `}
           >
             {segment.content}
           </a>

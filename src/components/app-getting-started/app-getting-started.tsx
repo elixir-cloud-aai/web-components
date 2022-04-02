@@ -12,9 +12,7 @@ export class AppGettingStarted {
   @State() data: any[] = [];
 
   componentDidLoad() {
-    console.log("Hello");
     axios.get(`${elixirBackend}/wc/get-started`).then((response) => {
-      console.log(response);
       this.data = response.data;
     });
   }
