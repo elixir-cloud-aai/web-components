@@ -10,6 +10,8 @@ export namespace Components {
     }
     interface AppContribute {
     }
+    interface AppCreatePermission {
+    }
     interface AppDocs {
     }
     interface AppGettingStarted {
@@ -18,9 +20,13 @@ export namespace Components {
     }
     interface AppIndexes {
     }
+    interface AppListPermissions {
+    }
     interface AppLoad {
     }
     interface AppManagePermission {
+    }
+    interface AppManageUsers {
     }
     interface AppNewService {
     }
@@ -30,9 +36,15 @@ export namespace Components {
     }
     interface WcElixirService {
     }
+    interface WcElixirUtilsCreatePermission {
+    }
+    interface WcElixirUtilsListPermissions {
+    }
     interface WcElixirUtilsManagePermissions {
         "authToken": string;
         "itemsPerPage"?: number;
+    }
+    interface WcElixirUtilsManageUsers {
     }
     interface WcElixirUtilsNewService {
         "apiUrl": string;
@@ -58,6 +70,12 @@ declare global {
         prototype: HTMLAppContributeElement;
         new (): HTMLAppContributeElement;
     };
+    interface HTMLAppCreatePermissionElement extends Components.AppCreatePermission, HTMLStencilElement {
+    }
+    var HTMLAppCreatePermissionElement: {
+        prototype: HTMLAppCreatePermissionElement;
+        new (): HTMLAppCreatePermissionElement;
+    };
     interface HTMLAppDocsElement extends Components.AppDocs, HTMLStencilElement {
     }
     var HTMLAppDocsElement: {
@@ -82,6 +100,12 @@ declare global {
         prototype: HTMLAppIndexesElement;
         new (): HTMLAppIndexesElement;
     };
+    interface HTMLAppListPermissionsElement extends Components.AppListPermissions, HTMLStencilElement {
+    }
+    var HTMLAppListPermissionsElement: {
+        prototype: HTMLAppListPermissionsElement;
+        new (): HTMLAppListPermissionsElement;
+    };
     interface HTMLAppLoadElement extends Components.AppLoad, HTMLStencilElement {
     }
     var HTMLAppLoadElement: {
@@ -93,6 +117,12 @@ declare global {
     var HTMLAppManagePermissionElement: {
         prototype: HTMLAppManagePermissionElement;
         new (): HTMLAppManagePermissionElement;
+    };
+    interface HTMLAppManageUsersElement extends Components.AppManageUsers, HTMLStencilElement {
+    }
+    var HTMLAppManageUsersElement: {
+        prototype: HTMLAppManageUsersElement;
+        new (): HTMLAppManageUsersElement;
     };
     interface HTMLAppNewServiceElement extends Components.AppNewService, HTMLStencilElement {
     }
@@ -118,11 +148,29 @@ declare global {
         prototype: HTMLWcElixirServiceElement;
         new (): HTMLWcElixirServiceElement;
     };
+    interface HTMLWcElixirUtilsCreatePermissionElement extends Components.WcElixirUtilsCreatePermission, HTMLStencilElement {
+    }
+    var HTMLWcElixirUtilsCreatePermissionElement: {
+        prototype: HTMLWcElixirUtilsCreatePermissionElement;
+        new (): HTMLWcElixirUtilsCreatePermissionElement;
+    };
+    interface HTMLWcElixirUtilsListPermissionsElement extends Components.WcElixirUtilsListPermissions, HTMLStencilElement {
+    }
+    var HTMLWcElixirUtilsListPermissionsElement: {
+        prototype: HTMLWcElixirUtilsListPermissionsElement;
+        new (): HTMLWcElixirUtilsListPermissionsElement;
+    };
     interface HTMLWcElixirUtilsManagePermissionsElement extends Components.WcElixirUtilsManagePermissions, HTMLStencilElement {
     }
     var HTMLWcElixirUtilsManagePermissionsElement: {
         prototype: HTMLWcElixirUtilsManagePermissionsElement;
         new (): HTMLWcElixirUtilsManagePermissionsElement;
+    };
+    interface HTMLWcElixirUtilsManageUsersElement extends Components.WcElixirUtilsManageUsers, HTMLStencilElement {
+    }
+    var HTMLWcElixirUtilsManageUsersElement: {
+        prototype: HTMLWcElixirUtilsManageUsersElement;
+        new (): HTMLWcElixirUtilsManageUsersElement;
     };
     interface HTMLWcElixirUtilsNewServiceElement extends Components.WcElixirUtilsNewService, HTMLStencilElement {
     }
@@ -139,17 +187,23 @@ declare global {
     interface HTMLElementTagNameMap {
         "app-community": HTMLAppCommunityElement;
         "app-contribute": HTMLAppContributeElement;
+        "app-create-permission": HTMLAppCreatePermissionElement;
         "app-docs": HTMLAppDocsElement;
         "app-getting-started": HTMLAppGettingStartedElement;
         "app-home": HTMLAppHomeElement;
         "app-indexes": HTMLAppIndexesElement;
+        "app-list-permissions": HTMLAppListPermissionsElement;
         "app-load": HTMLAppLoadElement;
         "app-manage-permission": HTMLAppManagePermissionElement;
+        "app-manage-users": HTMLAppManageUsersElement;
         "app-new-service": HTMLAppNewServiceElement;
         "app-service-component": HTMLAppServiceComponentElement;
         "app-service-list": HTMLAppServiceListElement;
         "wc-elixir-service": HTMLWcElixirServiceElement;
+        "wc-elixir-utils-create-permission": HTMLWcElixirUtilsCreatePermissionElement;
+        "wc-elixir-utils-list-permissions": HTMLWcElixirUtilsListPermissionsElement;
         "wc-elixir-utils-manage-permissions": HTMLWcElixirUtilsManagePermissionsElement;
+        "wc-elixir-utils-manage-users": HTMLWcElixirUtilsManageUsersElement;
         "wc-elixir-utils-new-service": HTMLWcElixirUtilsNewServiceElement;
         "wc-elixir-utils-service-list": HTMLWcElixirUtilsServiceListElement;
     }
@@ -159,6 +213,8 @@ declare namespace LocalJSX {
     }
     interface AppContribute {
     }
+    interface AppCreatePermission {
+    }
     interface AppDocs {
     }
     interface AppGettingStarted {
@@ -167,9 +223,13 @@ declare namespace LocalJSX {
     }
     interface AppIndexes {
     }
+    interface AppListPermissions {
+    }
     interface AppLoad {
     }
     interface AppManagePermission {
+    }
+    interface AppManageUsers {
     }
     interface AppNewService {
     }
@@ -179,9 +239,15 @@ declare namespace LocalJSX {
     }
     interface WcElixirService {
     }
+    interface WcElixirUtilsCreatePermission {
+    }
+    interface WcElixirUtilsListPermissions {
+    }
     interface WcElixirUtilsManagePermissions {
         "authToken"?: string;
         "itemsPerPage"?: number;
+    }
+    interface WcElixirUtilsManageUsers {
     }
     interface WcElixirUtilsNewService {
         "apiUrl"?: string;
@@ -196,17 +262,23 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "app-community": AppCommunity;
         "app-contribute": AppContribute;
+        "app-create-permission": AppCreatePermission;
         "app-docs": AppDocs;
         "app-getting-started": AppGettingStarted;
         "app-home": AppHome;
         "app-indexes": AppIndexes;
+        "app-list-permissions": AppListPermissions;
         "app-load": AppLoad;
         "app-manage-permission": AppManagePermission;
+        "app-manage-users": AppManageUsers;
         "app-new-service": AppNewService;
         "app-service-component": AppServiceComponent;
         "app-service-list": AppServiceList;
         "wc-elixir-service": WcElixirService;
+        "wc-elixir-utils-create-permission": WcElixirUtilsCreatePermission;
+        "wc-elixir-utils-list-permissions": WcElixirUtilsListPermissions;
         "wc-elixir-utils-manage-permissions": WcElixirUtilsManagePermissions;
+        "wc-elixir-utils-manage-users": WcElixirUtilsManageUsers;
         "wc-elixir-utils-new-service": WcElixirUtilsNewService;
         "wc-elixir-utils-service-list": WcElixirUtilsServiceList;
     }
@@ -217,17 +289,23 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-community": LocalJSX.AppCommunity & JSXBase.HTMLAttributes<HTMLAppCommunityElement>;
             "app-contribute": LocalJSX.AppContribute & JSXBase.HTMLAttributes<HTMLAppContributeElement>;
+            "app-create-permission": LocalJSX.AppCreatePermission & JSXBase.HTMLAttributes<HTMLAppCreatePermissionElement>;
             "app-docs": LocalJSX.AppDocs & JSXBase.HTMLAttributes<HTMLAppDocsElement>;
             "app-getting-started": LocalJSX.AppGettingStarted & JSXBase.HTMLAttributes<HTMLAppGettingStartedElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-indexes": LocalJSX.AppIndexes & JSXBase.HTMLAttributes<HTMLAppIndexesElement>;
+            "app-list-permissions": LocalJSX.AppListPermissions & JSXBase.HTMLAttributes<HTMLAppListPermissionsElement>;
             "app-load": LocalJSX.AppLoad & JSXBase.HTMLAttributes<HTMLAppLoadElement>;
             "app-manage-permission": LocalJSX.AppManagePermission & JSXBase.HTMLAttributes<HTMLAppManagePermissionElement>;
+            "app-manage-users": LocalJSX.AppManageUsers & JSXBase.HTMLAttributes<HTMLAppManageUsersElement>;
             "app-new-service": LocalJSX.AppNewService & JSXBase.HTMLAttributes<HTMLAppNewServiceElement>;
             "app-service-component": LocalJSX.AppServiceComponent & JSXBase.HTMLAttributes<HTMLAppServiceComponentElement>;
             "app-service-list": LocalJSX.AppServiceList & JSXBase.HTMLAttributes<HTMLAppServiceListElement>;
             "wc-elixir-service": LocalJSX.WcElixirService & JSXBase.HTMLAttributes<HTMLWcElixirServiceElement>;
+            "wc-elixir-utils-create-permission": LocalJSX.WcElixirUtilsCreatePermission & JSXBase.HTMLAttributes<HTMLWcElixirUtilsCreatePermissionElement>;
+            "wc-elixir-utils-list-permissions": LocalJSX.WcElixirUtilsListPermissions & JSXBase.HTMLAttributes<HTMLWcElixirUtilsListPermissionsElement>;
             "wc-elixir-utils-manage-permissions": LocalJSX.WcElixirUtilsManagePermissions & JSXBase.HTMLAttributes<HTMLWcElixirUtilsManagePermissionsElement>;
+            "wc-elixir-utils-manage-users": LocalJSX.WcElixirUtilsManageUsers & JSXBase.HTMLAttributes<HTMLWcElixirUtilsManageUsersElement>;
             "wc-elixir-utils-new-service": LocalJSX.WcElixirUtilsNewService & JSXBase.HTMLAttributes<HTMLWcElixirUtilsNewServiceElement>;
             "wc-elixir-utils-service-list": LocalJSX.WcElixirUtilsServiceList & JSXBase.HTMLAttributes<HTMLWcElixirUtilsServiceListElement>;
         }
