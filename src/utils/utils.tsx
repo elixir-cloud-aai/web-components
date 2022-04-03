@@ -67,6 +67,52 @@ const renderBlock = (block) => {
   });
 };
 
+const renderTable = (data) => {
+  return (
+    <div class="relative overflow-x-auto">
+      <table class="w-full text-sm text-left text-gray-700 dark:text-gray-400">
+        {data.header ? (
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              {data.table[0].cells.map((cell) => {
+                return (
+                  <th scope="col" class="px-6 py-3">
+                    {renderBlock({ text: [cell] })}
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
+        ) : null}
+        <tbody>
+          {data.table.map((row, index) => {
+            if (data.header && index === 0) return null;
+            return (
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                {row.cells.map((cell, index) => {
+                  if (index === 0) {
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium dark:text-white whitespace-nowrap"
+                    >
+                      {renderBlock({ text: [cell] })}
+                    </th>;
+                  }
+                  return (
+                    <th scope="col" class="px-6 py-3">
+                      {renderBlock({ text: [cell] })}
+                    </th>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
 export const renderContent = (data) => {
   return data.map((block) => {
     if (block) {
@@ -115,6 +161,8 @@ export const renderContent = (data) => {
         return (
           <hr class="my-3 border-t border-gray-300 dark:border-gray-600" />
         );
+      } else if (block.type == "table") {
+        return renderTable(block);
       } else {
         return (
           <img

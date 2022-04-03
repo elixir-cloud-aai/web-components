@@ -1,48 +1,31 @@
 import { Component, Host, h, State } from "@stencil/core";
-import { componentProps } from "../../types";
+import { elixirBackend } from "../../../config.js";
+import axios from "axios";
+import { renderLoaderGetStarted, renderContent } from "../../utils/utils.js";
 
 @Component({
   tag: "app-create-permission",
   scoped: true,
 })
 export class AppCreatePermission {
-  @State() componentProps: componentProps[] = [
-    // {
-    //   name: "authToken",
-    //   type: "string",
-    // },
-    // {
-    //   name: "apiUrl",
-    //   type: "string",
-    //   default: "https://trs-filer-test.rahtiapp.fi/ga4gh/trs/v2/openapi.json",
-    // },
-    // {
-    //   name: "schema",
-    //   type: "string",
-    //   default: "ServiceRegister",
-    // },
-  ];
+  @State() data: any[] = [];
 
-  renderProps = () => {
-    return this.componentProps.map((prop) => {
-      return (
-        <div class="w-full border-gray-200 border-b-2 grid grid-cols-3 gap-10 my-2.5">
-          <div>{prop.name}</div>
-          <div class="font-mono ">
-            <div class="bg-gray-100 w-max">{prop.type}</div>
-          </div>
-          <div>{prop.default}</div>
-        </div>
-      );
-    });
-  };
+  componentDidLoad() {
+    axios
+      .get(`${elixirBackend}/wc/docs/Create%20Permission%20Component`)
+      .then((response) => {
+        this.data = response.data;
+      });
+  }
 
   render() {
     return (
       <Host>
-        <div class="text-3xl font-semibold mb-5">Create Permission</div>
-        <div class=" my-10">
-          <div class="border-gray-100 rounded-lg p-3 border-2 my-10">
+        <div class="leading-relaxed my-3 tracking-wide dark:text-gray-200 text-3xl font-bold">
+          Create Permission Component
+        </div>
+        <div class="my-3">
+          <div class="border-gray-100 rounded-lg p-3 border shadow-md my-5">
             <div class="text-sm font-semibold w-full border-b-2 border-gray-100 pb-2">
               Component Demo
             </div>
@@ -50,33 +33,10 @@ export class AppCreatePermission {
               <wc-elixir-utils-create-permission></wc-elixir-utils-create-permission>
             </div>
           </div>
-          <div class="text-3xl my-5">Usage</div>
-          <div class="text-2xl mt-5">Principle</div>
-          <div class="my-3 leading-7">
-            This is the component used to create a new permission.
-          </div>
-          <div class="text-2xl mt-5">Implementation</div>
-          <div class="my-3 leading-7">
-            This component can we used by:
-            <button class="bg-gray-100 py-1 font-mono px-2 ml-2 cursor-text focus:outline-none">
-              &lt;wc-elixir-utils-create-permission&gt;
-            </button>
-          </div>
-          <div>
-            <div class="my-10">
-              <div class="text-2xl">Props</div>
-              <div class="my-3 leading-7">
-                <div class="lg:mr-32">
-                  <div class="w-full border-gray-200 border-b-2 text-sm grid grid-cols-3 gap-10">
-                    <div>Prop Name</div>
-                    <div>Type</div>
-                    <div>Default</div>
-                  </div>
-                  {this.renderProps()}
-                </div>
-              </div>
-            </div>
-          </div>
+          {this.data.length === 0
+            ? renderLoaderGetStarted()
+            : //@ts-ignore
+              renderContent(this.data)}
         </div>
       </Host>
     );
