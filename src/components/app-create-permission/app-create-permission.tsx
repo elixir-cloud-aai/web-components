@@ -12,7 +12,7 @@ export class AppCreatePermission {
 
   componentDidLoad() {
     axios
-      .get(`${elixirBackend}/wc/docs/Create%20Permission%20Component`)
+      .get(`${elixirBackend}/wc/docs/5%20Create%20Permission%20Component`)
       .then((response) => {
         this.data = response.data;
       });

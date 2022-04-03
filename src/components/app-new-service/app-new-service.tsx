@@ -12,7 +12,7 @@ export class AppNewService {
 
   componentDidLoad() {
     axios
-      .get(`${elixirBackend}/wc/docs/Add%20New%20Service%20Component`)
+      .get(`${elixirBackend}/wc/docs/4%20Add%20New%20Service%20Component`)
       .then((response) => {
         this.data = response.data;
       });

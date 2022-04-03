@@ -13,7 +13,7 @@ export class AppServiceComponent {
 
   componentDidLoad() {
     axios
-      .get(`${elixirBackend}/wc/docs/Service%20Component`)
+      .get(`${elixirBackend}/wc/docs/1%20Service%20Component`)
       .then((response) => {
         this.data = response.data;
       });
