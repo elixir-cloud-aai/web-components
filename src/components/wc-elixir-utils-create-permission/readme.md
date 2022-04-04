@@ -1,4 +1,4 @@
-# app-create-permission
+# wc-elixir-utils-create-permission
 
 
 
@@ -9,18 +9,13 @@
 
 ### Used by
 
- - [app-docs](../app-docs)
-
-### Depends on
-
-- [wc-elixir-utils-create-permission](../wc-elixir-utils-create-permission)
+ - [app-create-permission](../app-create-permission)
 
 ### Graph
 ```mermaid
 graph TD;
   app-create-permission --> wc-elixir-utils-create-permission
-  app-docs --> app-create-permission
-  style app-create-permission fill:#f9f,stroke:#333,stroke-width:4px
+  style wc-elixir-utils-create-permission fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -1,22 +1,23 @@
-import { Config } from '@stencil/core';
+import { Config } from "@stencil/core";
 
 export const config: Config = {
-  namespace: 'web-components',
-  globalStyle: 'src/global/app.css',
+  namespace: "web-components",
+  globalStyle: "src/global/app.css",
   outputTargets: [
     {
-      type: 'dist',
-      esmLoaderPath: '../loader',
+      type: "dist",
+      esmLoaderPath: "../loader",
     },
     {
-      type: 'dist-custom-elements-bundle',
+      type: "dist-custom-elements-bundle",
     },
     {
-      type: 'docs-readme',
+      type: "docs-readme",
     },
     {
-      type: 'www',
+      type: "www",
     },
+    { type: "dist-hydrate-script" },
   ],
-  preamble: 'Built by Elixir Cloud & AII',
+  preamble: "Built by Elixir Cloud & AII",
 };
