@@ -1,4 +1,4 @@
-const elixirBackend = "https://stormy-hamlet-10250.herokuapp.com"
+const elixirBackend = "https://elixir-backend.onrender.com"
 
 export {
     elixirBackend
