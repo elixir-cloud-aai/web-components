@@ -6,7 +6,7 @@ import { renderLoaderGetStarted, renderContent } from "../../utils/utils.js";
 @Component({
   tag: "app-community",
   styleUrl: "app-community.css",
-  scoped: true,
+  shadow: true,
 })
 export class AppCommunity {
   @State() data: any[] = [];

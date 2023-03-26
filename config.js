@@ -1,5 +1,3 @@
-const elixirBackend = "https://elixir-backend.onrender.com"
+const elixirBackend = "https://elixir-backend.onrender.com";
 
-export {
-    elixirBackend
-}
+export { elixirBackend };

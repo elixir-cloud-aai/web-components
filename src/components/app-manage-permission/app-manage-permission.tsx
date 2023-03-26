@@ -13,7 +13,7 @@ export class AppManagePermission {
 
   componentDidLoad() {
     axios
-      .get(`${elixirBackend}/wc/docs/3%20Manage%20Permission%20Component`)
+      .get(`${elixirBackend}/wc/docs/Manage Permission Component`)
       .then((response) => {
         this.data = response.data;
       });

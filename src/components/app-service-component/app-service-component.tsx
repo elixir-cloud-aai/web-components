@@ -12,11 +12,9 @@ export class AppServiceComponent {
   @State() data: any[] = [];
 
   componentDidLoad() {
-    axios
-      .get(`${elixirBackend}/wc/docs/1%20Service%20Component`)
-      .then((response) => {
-        this.data = response.data;
-      });
+    axios.get(`${elixirBackend}/wc/docs/Service Component`).then((response) => {
+      this.data = response.data;
+    });
   }
 
   render() {
