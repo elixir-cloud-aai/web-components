@@ -38,11 +38,11 @@
     "puppeteer": "^5.5.0",
     "stencil-router-v2": "^0.6.0",
     "tailwindcss": "^2.1.4",
-    "workbox-build": "^4.3.1"
+    "workbox-build": "^7.0.0"
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^1.6.8",
     "react-tiny-popover": "^7.0.1"
   }
 }
