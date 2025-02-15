@@ -38,7 +38,7 @@
     "puppeteer": "^23.5.0",
     "stencil-router-v2": "^0.6.0",
     "tailwindcss": "^2.1.4",
-    "workbox-build": "^7.0.0"
+    "workbox-build": "^7.3.0"
   },
   "license": "MIT",
   "dependencies": {
